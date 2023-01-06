@@ -30,10 +30,37 @@
         width: 100%;
         height: 100%;
     }
+    .geser {
+        animation: muncul 1.5s forwards ease-in-out;
+    }
+    @keyframes muncul {
+        from {
+            right: -900px;
+        }
+        to {
+            right: 0;
+        }
+    }
+    .hilang {
+        animation: hilang 4s forwards ease-in-out;
+    }
+    @keyframes hilang {
+        from {
+            right: 0;
+        }
+        to {
+            right: -900px;
+        }
+    }
 </style>
 
 <body class="bg-white font-inter overflow-x-hidden">
     <!-- <div  class="hidden body-overlay transition-all duration-300 ease-in-out"></div> -->
+    <div class="info-update transition duration-300 ease-in-out animate-bounce fixed bg-teal-100 0 shadow-lg  px-8 py-4 flex items-center flex-col gap-y-[2px] z-[999] bottom-1/2 -right-[900px] text-center rounded">
+        <span class="text-lg font-medium text-green-800">Halaman about-us Sudah ada! <b>Klik link</b> dibawah ini :)</span>
+        <span class="text-slate-400 mb-4">tapi, belum 100% jadi :(</span>
+        <a href="https://daffa2006.github.io/Rekayasa-Engineering-company-profile/about-us.html" class="rounded-xl px-8 py-2 w-max text-white hover:bg-blue-700 transition duration-300 ease-in-out hover:shadow-blue-500 hover:shadow-lg bg-blue-600">Link</a>
+    </div>
     <nav class="nav-container select-none w-screen   ">
         <div class="logo shrink-0">
             <img src="dist/img/logoRe/logo-re-colored.png" alt="Logo Rekayasa Engineering">
@@ -510,5 +537,18 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="dist/js/script.js"></script>
+    <script>
+        setTimeout(function() {
+            document.querySelector('.info-update').classList.toggle('geser')
+        }, 2500)
+       
+        setTimeout (function() {
+            document.querySelector('.info-update').classList.toggle('geser')
+            document.querySelector('.info-update').classList.toggle('hilang')
+            setTimeout (function(){
+                document.querySelector('.info-update').classList.add('hidden')
+            }, 4000)
+        }, 7000)
+    </script>
 </body>
 </html>
