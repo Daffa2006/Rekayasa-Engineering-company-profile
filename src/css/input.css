@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* body */
+    .body-overlay {
+        @apply bg-black opacity-25 fixed z-[95] inset-0 w-screen h-screen
+    }
+    /* ========== INDEX PAGE ========== */
+    /* Navbar */
+    .nav-container {
+        @apply  fixed  flex lg:justify-around lg:px-20 lg:gap-x-20 justify-between h-20 items-center bg-white px-4 z-[90]
+    }
+    .nav-items {
+        @apply flex lg:flex-row lg:justify-end lg:gap-x-6 lg:static lg:px-0 lg:pt-0 lg:z-0 lg:w-full lg:h-auto lg:shadow-none lg:bg-transparent lg:translate-x-0 flex-col items-start gap-y-6 fixed top-0 right-0 z-[99]  pt-[104px] px-4 w-[70vw] h-screen translate-x-[100%]  bg-white shadow-primary
+    }
+
+    .nav-link {
+        @apply text-base text-neutral500 font-medium
+    }
+    .nav-dropdown {
+        @apply flex  lg:gap-x-2 relative  sm:gap-x-4 sm:w-auto  w-full max-w-[192px] gap-x-0 justify-between items-center 
+    }
+    .dropdown-list {
+        @apply h-0  overflow-hidden bg-white absolute top-[40px] flex flex-col transition-all duration-300 ease-in-out
+    }
+    .dropdown-list-show {
+        @apply h-auto 
+    }
+    .arrow-collapse {
+        @apply fill-neutral400  px-0 rotate-0 transition-all duration-300 ease-in-out origin-center
+    }
+    .arrow-expand {
+        @apply fill-primary rotate-90
+    }
+    .nav-link-active {
+        @apply  flex lg:justify-center justify-start after:bottom-0  text-base text-primary font-medium relative after:content-[''] after:w-[12px] after:h-[2px] after:bg-primary after:absolute after:mt-[4px] 
+    }
+    .show-sidebar-nav {
+        @apply translate-x-[0%]
+    }
+
+     /* Hamburger */
+    .hamburger {
+        @apply flex flex-col gap-[4.5px] relative z-[99]
+    }
+
+    .hamburger-line {
+        @apply w-[18px] h-[1.5px] bg-primary rounded
+    }
+
+    .hamburger-active > span:nth-child(1) {
+        @apply rotate-45
+    }
+
+    .hamburger-active > span:nth-child(2) {
+        @apply scale-0
+    }
+
+    .hamburger-active > span:nth-child(3) {
+        @apply -rotate-45
+    }
+
+    /* Gallery Industries */
+    .gallery-slide {
+        @apply transition-all duration-300 ease-in-out filter  grayscale-[1]  lg:!w-[300px]  lg:!h-[300px] !w-[192px] !h-[192px]
+    } 
+    .swiper-gallery-industries {
+        @apply lg:!h-[455px] !h-[256px]
+    }
+    .swiper-gallery-industries > .swiper-wrapper {
+        @apply flex items-center
+    }
+    .swiper-gallery-industries {
+       @apply relative after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-0 after:bg-gradient-to-l after:from-white after:to-transparent lg:after:w-[170px] after:w-[52px] after:z-30 before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:bg-gradient-to-r before:from-white before:to-transparent lg:before:w-[170px] before:w-[52px] before:z-30
+    }
+    
+     .gallery-slide.swiper-slide-active {
+        @apply filter grayscale-0  lg:!w-[455px]  lg:!h-[455px] lg:px-5 !h-[256px] !w-[256px] px-4
+     }
+     
+     /* Why Us Section */ 
+     .why-us-section {
+        @apply lg:px-20 py-16 px-4  relative after:content-[''] after:absolute after:bg-blue50 after:-z-10 after:inset-0  after:h-1/2 
+     }
+     .why-us-layout {
+        @apply flex flex-col gap-y-8 items-center text-center
+     }
+     .why-us-container-cards {
+        @apply flex flex-row  justify-center flex-wrap gap-x-8 lg:w-full  gap-y-8 items-center text-center
+     }
+    .why-us-cards {
+        @apply flex lg:w-[296px] h-[352px] w-[328px]   flex-col items-center bg-white py-16 px-4  text-center rounded-xl shadow-primary 
+    }
+    .why-us-title {
+        @apply text-base text-black font-bold pt-4 pb-2
+    }
+    .why-us-description {
+        @apply text-sm text-neutral900 font-normal
+    }
+
+    /* Form */
+    .form-label {
+        @apply block text-base font-medium pb-[4px]
+    }
+    .form-input {
+        @apply px-4 py-[10px] border-[1px] border-neutral400 rounded-xl placeholder:text-neutral400 placeholder:font-normal placeholder:text-base
+    }
+
+    /* RE News */
+    .swiper-news > .swiper-wrapper {
+        @apply w-auto h-auto
+    }
+    /* .swiper-news > .swiper-wrapper > .swiper-slide {
+        @apply flex w-full h-full
+    } */
+    .news-slide {
+       @apply flex !w-[630px] !h-[200px] gap-x-3
+    }
+    .news-image {
+        @apply aspect-[3/2] max-w-[300px] max-h-[200px]
+    }
+    .news-article {
+        @apply flex flex-col py-2
+    }
+    .news-headline {
+        @apply text-base text-neutral700 font-bold pb-2
+    }
+    .news-created {
+        @apply text-sm text-neutral500 font-light pb-3
+    }
+    /* Footer */
+    .footer-container {
+        @apply flex lg:max-w-[305px] flex-col gap-y-4 w-full
+    }
+    .footer-title {
+        @apply text-lg font-bold text-secondary
+    }
+    .footer-link {
+        @apply text-base text-white font-normal
+    }
+
+       /* footer icon/logo bg */
+    .logo-icon-bg {
+        @apply flex justify-center items-center w-10 h-10 bg-tertiary rounded-full
+    }
+
+    /* Swiper Industries */
+    .slider-industries-overlay {
+        background-color: #5D7ABE59;
+;
+    }
+    .slider-industries > .swiper-slide  {
+        @apply lg:w-[360px]  w-[240px] h-[120px] flex items-center justify-center relative after:content-[''] after:absolute after:slider-industries-overlay after:inset-0 
+    }
+    .slider-industries > .slide-isClicked  {
+        @apply  after:!bg-transparent 
+    }
+    .slider-title {
+       @apply absolute lg:text-2xl text-base text-white font-bold z-20
+    }
+    .slider-industries > .swiper-slide > .swiper-slide__img {
+        @apply  object-cover
+    }
+
+    /* ========== ABOUT US PAGE ========== */
+
+    /* First Section */
+    .explanation-video {
+        @apply  lg:w-[630px] lg:h-[400px] w-full shrink-0  h-auto object-cover rounded-3xl
+    }
+    .explanation-title {
+        @apply lg:text-4xl text-2xl text-neutral700 font-bold
+    }
+    .explanation-description {
+        @apply text-base text-neutral600 font-normal
+    }
+
+    /* Goal Section */
+  .goals-container {
+    @apply relative flex flex-col items-center text-center gap-y-10
+  }
+  .quotation-mark:after, .quotation-mark:before {
+    background-image: url('dist/img/goals/quotation-mark.svg');
+  }
+  .quotation-mark {
+    @apply after:content-['']
+  }
+  .goals-title {
+    @apply text-3xl text-neutral700 font-bold
+  }
+  .goals-description {
+    @apply text-2xl text-neutral600 font-normal
+  }
+}
+
+/* 
+    - ornament di index.html (compro) udah beres
+    - implementasi halaman about-us.html (compro) bagian section introduction & visi misi
+*/
+@layer utilities {
+   /* .calc-plus-155px {
+    height: calc(100% + 155px) ;
+    width: calc(100% + 155px) !important;
+   } */
+    .slide-track {
+        animation: move 12s linear infinite;
+    }
+    @media screen and (min-width: 1024px) {
+        .slide-track {
+            animation: none;
+        }
+    }
+    @keyframes move {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-136%);
+        }
+    }
+
+    .shadow-form {
+        box-shadow : 0px 12px 32px rgba(0, 0, 0, 0.08);
+    }
+    .shadow-primary {
+        filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.12));
+    }
+    .font-inter {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .secondary-overlay {
+        background: linear-gradient(0deg, rgba(28, 46, 88, 0.75), rgba(28, 46, 88, 0.75));
+    }
+    .bg-akhlak {
+        background-color: #445E9C;
+    }
+}
