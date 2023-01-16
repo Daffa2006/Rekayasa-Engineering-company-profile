@@ -105,7 +105,7 @@
         @apply block text-base font-medium pb-[4px]
     }
     .form-input {
-        @apply px-4 py-[10px] border-[1px] border-neutral400 rounded-xl placeholder:text-neutral400 placeholder:font-normal placeholder:text-base
+        @apply w-full px-4 py-[10px] border-[1px] border-neutral400 rounded-xl placeholder:text-neutral400 placeholder:font-normal placeholder:text-base
     }
 
     /* RE News */
@@ -116,7 +116,7 @@
         @apply flex w-full h-full
     } */
     .news-slide {
-       @apply flex !w-[630px] !h-[200px] gap-x-3
+       @apply flex lg:flex-row flex-col lg:!w-[630px] lg:!h-[200px] !w-[288px] !h-[384px] gap-x-3
     }
     .news-image {
         @apply aspect-[3/2] max-w-[300px] max-h-[200px]
@@ -179,26 +179,115 @@
 
     /* Goal Section */
   .goals-container {
-    @apply relative flex flex-col items-center text-center gap-y-10
+    @apply relative lg:gap-y-20  flex flex-col items-center text-center gap-y-10 w-full
   }
-  .quotation-mark:after, .quotation-mark:before {
-    background-image: url('dist/img/goals/quotation-mark.svg');
+  .quotation-mark-vision::after, .quotation-mark-vision::before {
+    content: '';
+    background-image: url('/dist/img/goals/quotation-mark.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 54px;
+    height: 54px;
+    position: absolute;
   }
-  .quotation-mark {
-    @apply after:content-['']
+  .quotation-mark-vision {
+    @apply  relative lg:before:left-[8%] lg:before:-top-[120%] lg:after:right-[2%] lg:after:-bottom-[35%]
+    before:-top-[180%] before:left-[26px] after:right-[27.24px] after:-bottom-[90%]
+  }
+  .quotation-mark-mission::after, .quotation-mark-mission::before {
+    content: '';
+    background-image: url('/dist/img/goals/quotation-mark.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+  }
+  .quotation-mark-mission {
+    @apply relative lg:before:left-[2%] lg:before:-top-[78%] lg:after:right-[2%] lg:after:-bottom-[35%]
+    before:-top-[130%] before:left-[26px] after:right-[27.24px] after:-bottom-[70%]
   }
   .goals-title {
-    @apply text-3xl text-neutral700 font-bold
+    @apply lg:text-5xl text-3xl text-neutral700 font-bold
   }
   .goals-description {
-    @apply text-2xl text-neutral600 font-normal
+    @apply lg:text-4xl lg:max-w-[560px] lg:px-20 text-2xl text-neutral600 font-normal  w-full max-w-[360px]  px-[26px]
   }
 }
+/* akhlak */
+.akhlak-container {
+    @apply flex flex-col gap-y-3
+}
+.akhlak-title::first-letter {
+    -webkit-text-fill-color: #445E9C;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+.akhlak-title {
+    @apply relative lg:text-2xl text-xl text-white font-bold first-letter:text-3xl first-letter:mr-[2px]  before:absolute before:inset-0 before:translate-x-[6px] before:translate-y-[6px]
+}
+.akhlak-description {
+    @apply  text-lg text-white font-normal
+}
 
-/* 
-    - ornament di index.html (compro) udah beres
-    - implementasi halaman about-us.html (compro) bagian section introduction & visi misi
-*/
+/* our director */
+.director-subtitle {
+    @apply w-full flex flex-col items-center  text-center bg-director-subtitle absolute bottom-0 right-0 left-0 backdrop-filter backdrop-blur-[6px] py-4
+}
+.director-img {
+    @apply w-full object-cover
+}
+.director-name {
+    @apply text-xl text-white font-bold
+}
+.director-role {
+    @apply text-base text-white font-medium
+}
+
+/* logo philosophy section */
+.shape-philosophy-card {
+    @apply flex gap-x-4 p-4 rounded-xl 
+}
+.shape-philosophy-card {
+    box-shadow: 0px 8px 24px rgba(68, 94, 156, 0.12);
+}
+.shape-philosophy-description {
+    @apply text-base text-neutral600 font-normal
+}
+.color-philosophy-card {
+    @apply flex gap-x-4  w-max
+}
+.color-philosophy-circle {
+    @apply h-[32px] w-[32px] rounded-full
+}
+.color-philosophy-description {
+    @apply text-base text-neutral600 font-normal max-w-[223.33px] w-full
+}
+
+/* subsidiary section */
+.subsidiary-card {
+    @apply w-full flex flex-col gap-y-3 p-4 bg-white
+}
+.subsidiary-card {
+    box-shadow: 0px 4px 24px rgba(68, 94, 156, 0.12);
+}
+.subsidiary-name {
+    @apply lg:text-2xl text-xl text-neutral700 font-bold
+}
+.subsidiary-wrapper {
+    @apply flex xl:flex-row xl:justify-between flex-col gap-y-1
+}
+.subsidiary-title {
+    @apply text-base text-neutral500 font-normal
+}
+.subsidiary-description {
+    @apply text-base text-neutral600 font-normal
+}
+.subsidiary-icon-wrapper {
+    @apply flex gap-x-3
+}
 @layer utilities {
    /* .calc-plus-155px {
     height: calc(100% + 155px) ;
@@ -221,7 +310,9 @@
             transform: translateX(-136%);
         }
     }
-
+    .bg-video-btn {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
     .shadow-form {
         box-shadow : 0px 12px 32px rgba(0, 0, 0, 0.08);
     }
@@ -231,11 +322,10 @@
     .font-inter {
         font-family: 'Inter', sans-serif;
     }
-
+    .bg-director-subtitle {
+        background-color: rgba(34, 34, 34, 0.35);
+    }
     .secondary-overlay {
         background: linear-gradient(0deg, rgba(28, 46, 88, 0.75), rgba(28, 46, 88, 0.75));
-    }
-    .bg-akhlak {
-        background-color: #445E9C;
     }
 }

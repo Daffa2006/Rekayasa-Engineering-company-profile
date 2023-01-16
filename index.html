@@ -25,35 +25,49 @@
         height: 100%;
         object-fit: cover;
     }
+
     .animate-load {
         animation: load 8.5s forwards linear;
     }
+
     @keyframes load {
-        from{width:0;}
-        to{width: 100%;}
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
     }
+
     .swiper {
         width: 100%;
         height: 100%;
     }
+
     .geser {
         animation: muncul 1.5s forwards ease-in-out;
     }
+
     @keyframes muncul {
         from {
             right: -900px;
         }
+
         to {
             right: 0;
         }
     }
+
     .hilang {
         animation: hilang 4s forwards ease-in-out;
     }
+
     @keyframes hilang {
         from {
             right: 0;
         }
+
         to {
             right: -900px;
         }
@@ -62,27 +76,26 @@
 
 <body class="bg-white font-inter overflow-x-hidden">
     <!-- <div  class="hidden body-overlay transition-all duration-300 ease-in-out"></div> -->
-    <div class=" info-update transition duration-300 ease-in-out animate-bounce fixed bg-teal-100 0 shadow-lg   py-4 flex items-center flex-col gap-y-[2px] z-[999] bottom-1/2 -right-[900px] text-center rounded">
+    <!-- <div class=" info-update transition duration-300 ease-in-out animate-bounce fixed bg-teal-100 0 shadow-lg   py-4 flex items-center flex-col gap-y-[2px] z-[999] bottom-1/2 -right-[900px] text-center rounded">
         <span class="px-8 text-lg font-medium text-green-800">Halaman about-us Sudah ada! <b>Klik link</b> dibawah ini :)</span>
         <span class="px-8 text-slate-400 mb-4">tapi, belum 100% jadi :(</span>
         <a href="https://daffa2006.github.io/Rekayasa-Engineering-company-profile/about-us.html" class="rounded-xl px-8 py-2 w-max text-white hover:bg-blue-700 transition duration-300 ease-in-out hover:shadow-blue-500 hover:shadow-lg bg-blue-600">Link</a>
         <span class="absolute bottom-0 loading self-start bg-emerald-700 w-0  h-[4px] rounded-full px-0 pt-1"></span>
-    </div>
+    </div> -->
     <nav class="nav-container select-none w-screen   ">
         <div class="logo shrink-0">
-            <img src="dist/img/logoRe/logo-re-colored.png" alt="Logo Rekayasa Engineering">
+            <img src="dist/img/logo/logo-re-colored.png" alt="Logo Rekayasa Engineering">
         </div>
         <div class=" nav-items transition duration-300 ease-in-out ">
             <a class="nav-link-active nav-link" href="#">Home</a>
-            <a class="nav-link" href="#">Company</a>
+            <a class="nav-link" href="#">About Us</a>
             <a class="nav-link" href="#">Business</a>
             <a class="nav-link" href="#">Our Project</a>
             <div class="nav-dropdown">
                 <a class="nav-link" href="javascript:void(0)">Sustainability</a>
                 <svg class="nav-arrow arrow-collapse  " width="8" height="12" viewBox="0 0 8 12"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.589844 10.59L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.59Z"
-                     />
+                    <path d="M0.589844 10.59L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.59Z" />
                 </svg>
                 <div class=" dropdown-list  ">
                     <a href="#">Quality Policy</a>
@@ -94,20 +107,22 @@
                 </div>
             </div>
             <a class="nav-link" href="#">Contact Us</a>
-           
+
         </div>
-       
-            <button class="lg:hidden hamburger " id="hamburger" name="hamburger" type="button">
-                <span class="hamburger-line transition duration-300 ease-in-out origin-top-left "></span>
-                <span class="hamburger-line transition duration-300 ease-in-out"></span>
-                <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
-            </button>
-        
+
+        <button class="lg:hidden hamburger " id="hamburger" name="hamburger" type="button">
+            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left "></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+        </button>
+
     </nav>
     <main class="pt-20">
         <section class="lg:relative overflow-x-hidden pb-16">
-            <img class="lg:block hidden absolute -right-[3.7%] top-[9%]" src="dist/img/ornament/Pattern.svg" alt="Pattern">
-            <div class="flex lg:flex-row-reverse lg:items-center lg:justify-between lg:pl-20 lg:pr-[151px] px-4 flex-col justify-center ">
+            <img class="lg:block hidden absolute -right-[3.7%] top-[9%]" src="dist/img/ornament/Pattern.svg"
+                alt="Pattern">
+            <div
+                class="flex lg:flex-row-reverse lg:items-center lg:justify-between lg:pl-20 lg:pr-[151px] px-4 flex-col justify-center ">
                 <div class=" static lg:m-0  hero-img  mx-auto mb-[24px]">
                     <img class="h-auto lg:w-[396px] w-[285px]" src="dist/img/person/hero-people.png" alt="Hero Image">
                 </div>
@@ -116,9 +131,11 @@
                     <header class="flex lg:items-start flex-col items-center gap-y-4">
                         <h1 class="lg:text-4xl text-2xl text-neutral700  font-bold">PT.Rekayasa Engineering</h1>
                         <span class="lg:text-[64px] leading-none text-3xl text-neutral700 font-bold">
-                            Your Engineering <br><strong class="lg:text-[64px] text-tertiary500 font-bold"> Partner</strong>
+                            Your Engineering <br><strong class="lg:text-[64px] text-tertiary500 font-bold">
+                                Partner</strong>
                         </span>
-                        <p class="lg:w-full w-[328px] lg:text-lg text-sm text-neutral900 font-medium">Basic Engineering & Field Engineering, Front End
+                        <p class="lg:w-full w-[328px] lg:text-lg text-sm text-neutral900 font-medium">Basic Engineering
+                            & Field Engineering, Front End
                             Engineering
                             Design (FEED), EPC of Electrical &
                             Instrument, EPC of Tank, and EPC Services.</p>
@@ -272,16 +289,35 @@
 
         <!-- About -->
         <section class="py-16 px-4 relative ">
-            <img class="lg:block hidden absolute bottom-1/3 -left-[47px] -z-10" src="dist/img/ornament/Pattern.svg" alt="Pattern">
+            <img class="lg:block hidden absolute bottom-1/3 -left-[47px] -z-10" src="dist/img/ornament/Pattern.svg"
+                alt="Pattern">
             <div class="relative flex mx-auto flex-col items-center gap-y-8 text-center w-full max-w-[846px]">
-                <video class="w-full h-auto object-cover rounded-3xl" controls>
-                    <source src="dist/video/ChatGPT _ AI yang _katanya_ bisa MENGGANTIKAN PROGRAMMER 🤯.mp4">
-                </video>
-                <img class="lg:block hidden absolute top-[54px] -right-[14%] -z-10" src="dist/img/ornament/Pattern.svg" alt="Pattern">
+                <div class="video-container relative w-full h-auto rounded-3xl overflow-clip ">
+                    <video class="video-player object-cover">
+                        <source src="dist/video/ChatGPT _ AI yang _katanya_ bisa MENGGANTIKAN PROGRAMMER 🤯.mp4">
+                    </video>
+                    <div class="video-overlay absolute flex flex-col gap-y-6 items-center justify-center inset-0 w-full h-[87%]">
+                        <div>
+                            <img src="dist/img/logo/logo-re-letter-R.png" alt="Logo Rekayasa Engineering">
+                        </div>
+                        <div class=" backdrop-blur-[2px] flex items-center box-border justify-center w-[48px] h-[48px] bg-video-btn rounded-full">
+                            <svg class="ml-[18px] mr-[13.5px] w-[16.5px] h-[19.5px] " viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.2781 8.74367L2.77813 0.503046C2.55326 0.360544 2.29356 0.282556 2.02738 0.277596C1.76121 0.272636 1.49878 0.340895 1.26876 0.474921C1.03533 0.60299 0.840738 0.791608 0.705455 1.02093C0.570172 1.25025 0.4992 1.5118 0.500007 1.77805V18.278C0.4992 18.5443 0.570172 18.8058 0.705455 19.0352C0.840738 19.2645 1.03533 19.4531 1.26876 19.5812C1.49878 19.7152 1.76121 19.7835 2.02738 19.7785C2.29356 19.7735 2.55326 19.6955 2.77813 19.553L16.2781 11.3124C16.4994 11.1789 16.6824 10.9905 16.8095 10.7655C16.9365 10.5405 17.0033 10.2865 17.0033 10.028C17.0033 9.76963 16.9365 9.5156 16.8095 9.29057C16.6824 9.06555 16.4994 8.87716 16.2781 8.74367Z" fill="white"/>
+                                </svg>
+                                
+                        </div>
+                        <div>
+                            <span class="text-base text-neutral700 font-medium">Rekayasa Engineering Video</span>
+                        </div>
+                    </div>
+                </div>
+                <img class="lg:block hidden absolute top-[54px] -right-[14%] -z-10" src="dist/img/ornament/Pattern.svg"
+                    alt="Pattern">
                 <header>
                     <h2 class=" lg:text-2xl text-xl font-bold text-blue900 ">PT. Rekayasa Engineering</h2>
                 </header>
-                <p class="lg:text-base text-sm text-neutral-600 font-normal">PT REKAYASA ENGINEERING provide Basic Engineering &
+                <p class="lg:text-base text-sm text-neutral-600 font-normal">PT REKAYASA ENGINEERING provide Basic
+                    Engineering &
                     Field
                     Engineering, Front End Engineering Design (FEED), EPC of Electrical & Instrument, EPC of Tank, and
                     EPC Services in a wide range of engineering services area, as follows : Petrochemical and Chemical
@@ -299,8 +335,7 @@
         </section>
 
         <!-- Why Us -->
-        <section
-            class="why-us-section">
+        <section class="why-us-section">
             <div class="why-us-layout">
                 <header class="lg:w-[507px]">
                     <h2 class="text-3xl pb-3 text-blue900 font-bold">Why Us</h2>
@@ -310,8 +345,7 @@
                         produk yang berkualitas</p>
                 </header>
                 <!-- Why us cards -->
-                <div
-                    class="why-us-container-cards ">
+                <div class="why-us-container-cards ">
                     <div class="why-us-cards">
                         <img src="dist/img/whyUs/engineer-berpengalaman.svg" alt="Engineer Berpengalaman">
                         <span class="why-us-title">Engineer Berpengalaman</span>
@@ -344,24 +378,26 @@
         <!-- Request Call Back -->
         <section class="py-16 px-4">
             <div
-                class="flex lg:flex-row lg:px-20 lg:gap-x-5 lg:justify-between flex-col gap-y-8 items-center text-center">
-                <div class="flex flex-col items-center gap-y-6 max-w-[521px] w-full">
-                    <header>
+                class="flex lg:flex-row lg:px-20 lg:gap-x-5 lg:justify-center flex-col gap-y-8 items-center text-center">
+                <div class="max-w-[738px] w-full flex flex-col items-center gap-y-6 ">
+                    <header class="max-w-[521px]">
                         <h2 class="lg:text-4xl text-3xl pb-3 text-blue900 font-bold">Request Call Back</h2>
                         <p class="lg:text-base text-sm font-normal">Would you like to speak to one of our Marketing
                             advisers over the
                             phone? Just submit your details and we’ll be in touch shortly.</p>
                     </header>
-                    <div class="flex items-center justify-center relative after:content-[''] after:block after:absolute after:top-[30%] after:left-[12%] after:-z-10 after:rounded-full after:border-orange500 after:border-[2px] after:w-[242px] after:h-[242px]">
+                    <div
+                        class="flex items-center justify-center relative after:content-[''] after:block after:absolute after:top-[30%] after:left-[12%] after:-z-10 after:rounded-full after:border-orange500 after:border-[2px] after:w-[242px] after:h-[242px]">
                         <img src="dist/img/person/call-people.png" alt="Request Call Back">
-                        <img class="absolute -z-20 -left-[1.5%] top-[15%]" src="dist/img/ornament/Pattern.svg" alt="Pattern">
+                        <img class="absolute -z-20 -left-[1.5%] top-[15%]" src="dist/img/ornament/Pattern.svg"
+                            alt="Pattern">
                     </div>
                 </div>
                 <!-- Form -->
-                <div class="flex flex-col text-left bg-white shadow-form px-6 py-8 gap-y-4">
+                <div class="flex flex-col text-left bg-white shadow-form px-6 py-8 gap-y-4  rounded-2xl">
                     <span class=" text-base text-primary font-normal ">Make sure the information you fill in is correct,
                         so we can contact you</span>
-                    <form class="flex flex-col gap-y-4" action="">
+                    <form class="flex flex-col gap-y-4 w-full" action="">
                         <span>
                             <label class="form-label" for="name">Your Name</label>
                             <input class="form-input" type="text" id="name" placeholder="Your name">
@@ -384,14 +420,14 @@
                 </div>
             </div>
         </section>
-
         <!-- RE News -->
         <section class="relative py-16 bg-blue50 overflow-hidden">
             <img class="lg:block hidden absolute -top-[6.5%] " src="dist/img/ornament/Pattern.svg" alt="Pattern">
             <div class="flex flex-col items-center gap-y-5">
                 <header class="flex flex-col items-center lg:px-0 px-4 gap-y-3 lg:w-[521px] text-center">
-                    <h2 class="lg:text-4xl text-blue900 font-bold">RE News</h2>
-                    <p class="lg:text-base text-neutral500">Check the latest news so you don't miss the information</p>
+                    <h2 class="lg:text-4xl text-3xl text-blue900 font-bold">RE News</h2>
+                    <p class="lg:text-base text-sm text-neutral500">Check the latest news so you don't miss the
+                        information</p>
                 </header>
                 <div class="swiper swiper-news lg:pl-20 pl-4">
                     <div class="swiper-wrapper">
@@ -440,12 +476,13 @@
                 </div>
             </div>
         </section>
-
         <!-- contact -->
         <section
             class="relative lg:py-[104px]  py-16 px-4 secondary-overlay overflow-clip  lg:h-full lg:w-full h-[420px]">
-            <img class="lg:block hidden absolute -top-[11.6%] -left-[4%] -z-10" src="dist/img/ornament/Pattern.svg" alt="Pattern">
-            <img class="absolute lg:h-[1360px]   w-full h-full inset-0 object-cover   -z-20" src="dist/img/contact/grahare.jpg" alt="Grahare">
+            <img class="lg:block hidden absolute -top-[11.6%] -left-[4%] -z-10" src="dist/img/ornament/Pattern.svg"
+                alt="Pattern">
+            <img class="absolute lg:h-[1360px]   w-full h-full inset-0 object-cover   -z-20"
+                src="dist/img/contact/grahare.jpg" alt="Grahare">
             <div class="flex  flex-col items-center text-center gap-y-8">
                 <header>
                     <h2 class="text-3xl text-white font-bold  pb-3">Let's Works Together</h2>
@@ -466,7 +503,8 @@
     <footer class="lg:px-20 py-16 px-4 bg-primary">
         <div class="flex gap-x-5 lg:justify-between lg:flex-row flex-col flex-wrap justify-start  items-start gap-y-5">
             <div class="footer-container">
-                <img class="object-contain h-auto w-[136.96px]" src="dist/img/logoRe/logo-re-putih.png" alt="Logo Rekayasa Engineering">
+                <img class="object-contain h-auto w-[136.96px]" src="dist/img/logo/logo-re-putih.png"
+                    alt="Logo Rekayasa Engineering">
                 <span class="text-white text-xl font-bold">Rekayasa Engineering</span>
                 <p class="text-white text-base">Lorem ipsum doplor sit amet consectetur. Nibh placerat consectetur ipsum
                     vitae in aliquam. Vestibulum
@@ -533,10 +571,13 @@
                     <span class="footer-title">Our Social Media</span>
                     <div class="flex flex-row justify-between flex-wrap w-[306px]">
                         <a class="logo-icon-bg" href="#"><img src="dist/img/social-media/youtube.svg" alt="Youtube"></a>
-                        <a class="logo-icon-bg" href="#"><img src="dist/img/social-media/facebook.svg" alt="Facebook"></a>
-                        <a class="logo-icon-bg" href="#"><img src="dist/img/social-media//instagram.svg" alt="Instagram"></a>
+                        <a class="logo-icon-bg" href="#"><img src="dist/img/social-media/facebook.svg"
+                                alt="Facebook"></a>
+                        <a class="logo-icon-bg" href="#"><img src="dist/img/social-media//instagram.svg"
+                                alt="Instagram"></a>
                         <a class="logo-icon-bg" href="#"><img src="dist/img/social-media/twitter.svg" alt="Twitter"></a>
-                        <a class="logo-icon-bg" href="#"><img src="dist/img/social-media/linkedIn.svg" alt="LinkedIn"></a>
+                        <a class="logo-icon-bg" href="#"><img src="dist/img/social-media/linkedIn.svg"
+                                alt="LinkedIn"></a>
                     </div>
                 </div>
             </div>
@@ -545,20 +586,20 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="dist/js/script.js"></script>
     <script>
-       
-        setTimeout(function() {
-            document.querySelector('.info-update').classList.toggle('geser')
-        }, 2500)
-        setTimeout(function() {
-            document.querySelector('.loading').classList.add('animate-load')
-        },4000)
-        setTimeout (function() {
-            document.querySelector('.info-update').classList.toggle('geser')
-            document.querySelector('.info-update').classList.toggle('hilang')
-            setTimeout (function(){
-                document.querySelector('.info-update').classList.add('hidden')
-            }, 4000)
-        }, 12500)
+        // setTimeout(function () {
+        //     document.querySelector('.info-update').classList.toggle('geser')
+        // }, 2500)
+        // setTimeout(function () {
+        //     document.querySelector('.loading').classList.add('animate-load')
+        // }, 4000)
+        // setTimeout(function () {
+        //     document.querySelector('.info-update').classList.toggle('geser')
+        //     document.querySelector('.info-update').classList.toggle('hilang')
+        //     setTimeout(function () {
+        //         document.querySelector('.info-update').classList.add('hidden')
+        //     }, 4000)
+        // }, 12500)
     </script>
 </body>
+
 </html>

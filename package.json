@@ -1,8 +1,8 @@
 {
-  "name": "website-rtu-tailwind",
+  "name": "company-profile-re",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/css/input.css -o ./dist/css/style.css --watch"
   },
