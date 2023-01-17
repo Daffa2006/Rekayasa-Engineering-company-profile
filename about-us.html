@@ -17,20 +17,6 @@
         rel="stylesheet">
 </head>
 
-<style>
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .swiper {
-        width: 100%;
-        height: 100%;
-    }
-</style>
-
 <body class="bg-white font-inter overflow-x-hidden">
     <!-- <div  class="hidden body-overlay transition-all duration-300 ease-in-out"></div> -->
     <nav class="nav-container select-none w-screen   ">
@@ -138,7 +124,7 @@
         <section>
             <div class="flex lg:flex-row flex-col w-full">
                 <div class="flex flex-col lg:w-1/2 w-full">
-                    <div class="goals-container  py-[110px] bg-white ">
+                    <div class="goals-container h-full  py-[110px] bg-white ">
                         <span class="goals-title">
                             Vision
                         </span>
@@ -146,7 +132,7 @@
                             Trusted Green Engineering Partner
                         </span>
                     </div>
-                    <div class="goals-container  py-[126px] bg-blue50">
+                    <div class="goals-container h-full  py-[126px] bg-blue50">
                         <span class="goals-title">
                             Mission
                         </span>
@@ -155,7 +141,9 @@
                         </span>
                     </div>
                 </div>
-                <div class="py-16 flex flex-col bg-blue700 lg:w-1/2 w-full">
+                <div class="relative py-16 flex flex-col bg-blue700 lg:w-1/2 w-full">
+                    <img class="absolute right-0 bottom-0" src="dist/img/ornament/light-blue-wave.svg" alt="Ornament">
+                    <img class="absolute right-0 bottom-0" src="dist/img/ornament/lighter-blue-wave.svg" alt="Ornament">
                     <div class="pb-6">
                         <span class="lg:text-5xl block text-2xl text-white font-bold text-center">AKHLAK</span>
                     </div>
@@ -194,10 +182,12 @@
         <section>
             <div class="w-full h-full max-h-[500px] flex lg:flex-row flex-col ">
                 <div class="relative lg:w-1/2 w-full h-full">
-                    <img class="object-cover lg:w-auto" src="dist/img/person/komisaris.png" alt="Komisaris">
+                    <!-- <img class="object-cover w-full h-[500px]" src="dist/img/person/komisaris.png" alt="Komisaris"> -->
+                    <div style="background-image: url('/dist/img/person/komisaris.png'); background-position: 20% 0;"
+                        class="img bg-top bg-no-repeat bg-cover w-full h-[500px]"></div>
                     <picture>
                         <source media="(min-width:1024px)" srcset="dist/img/ornament/white-wave-desktop.svg">
-                        <img class="absolute lg:top-0 lg:right-0 bottom-0  w-full h-full"
+                        <img class="lg:w-auto w-full absolute lg:right-0 bottom-0"
                             src="dist/img/ornament/white-wave-mobile.svg" alt="Wave Ornament">
                     </picture>
                 </div>
@@ -306,9 +296,9 @@
             <div class="bg-[#F5F8FF] w-full h-1/2 absolute -z-10 bottom-0"></div>
             <div class="flex lg:flex-row  gap-5 flex-col lg:px-20 px-4">
                 <div class="subsidiary-card ">
-                    <div>
+                    <figure>
                         <img src="dist/img/logo/logo-recare.png" alt="logo RECARE">
-                    </div>
+                    </figure>
                     <div>
                         <span class="subsidiary-name">PT REKAYASA CAKRAWALA RESOURCES</span>
                     </div>
@@ -337,9 +327,9 @@
                     </div>
                 </div>
                 <div class="subsidiary-card ">
-                    <div>
+                    <figure>
                         <img src="dist/img/logo/logo-recon.png" alt="logo RECON">
-                    </div>
+                    </figure>
                     <div>
                         <span class="subsidiary-name">PT RECON SARANA UTAMA</span>
                     </div>

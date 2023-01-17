@@ -325,6 +325,9 @@
     .bg-director-subtitle {
         background-color: rgba(34, 34, 34, 0.35);
     }
+    .bg-warm-blue-gradient {
+        background: linear-gradient(180deg, #C7D8FF 0%, #F5F8FF 100%);
+    }
     .secondary-overlay {
         background: linear-gradient(0deg, rgba(28, 46, 88, 0.75), rgba(28, 46, 88, 0.75));
     }
