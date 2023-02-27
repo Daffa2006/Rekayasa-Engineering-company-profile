@@ -41,7 +41,6 @@
         </div>
     </div>
 </section>
-
 <section x-data="{
     init() {
         new Swiper('.swiper-industries', {
@@ -62,48 +61,47 @@
     <div class="swiper swiper-industries cursor-pointer">
         <div  x-ref="sliderIndustries" class="swiper-wrapper slider-industries ">
             <div @click="clearThenSet" class="swiper-slide">
-                <img  class="swiper-slide__img " src="dist/img/geothermal.png" alt="Project" />
+                <img  class="swiper-slide__img  w-full h-full" src="dist/img/geothermal.png" alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img" src="dist/img/ULUBELU_150615_IDRC (1).png" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="dist/img/ULUBELU_150615_IDRC (1).png" alt="Project" />
                 <span class="slider-title">Oil & Gas</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img" src="dist/img/ULUBELU_150615_IDRC.png" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="dist/img/ULUBELU_150615_IDRC.png" alt="Project" />
                 <span class="slider-title">Chemical & Argo Industry</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img" src="dist/img/ULUBELU_150615_IDRC 3.png" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="dist/img/ULUBELU_150615_IDRC 3.png" alt="Project" />
                 <span class="slider-title">Petrochemical & Industry</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img" src="dist/img/daniel-wiadro-GAEvM4qvlBk-unsplash.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="dist/img/daniel-wiadro-GAEvM4qvlBk-unsplash.jpg" alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img" src="https://swiperjs.com/demos/images/nature-6.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-6.jpg" alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img" src="https://swiperjs.com/demos/images/nature-7.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-7.jpg" alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img" src="https://swiperjs.com/demos/images/nature-8.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-8.jpg" alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img" src="https://swiperjs.com/demos/images/nature-9.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-9.jpg" alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img" src="https://swiperjs.com/demos/images/nature-10.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-10.jpg" alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
         </div>
     </div>
-
     <div class="pb-16  flex flex-col items-center gap-y-8">
         <div class="flex py-8  px-4 lg:gap-y-8 flex-col  text-center gap-y-3 w-full max-w-[630px]">
             <span class="lg:text-4xl text-neutral700 text-lg font-bold">Geothermal & Powerplan</span>
@@ -119,34 +117,35 @@
                     slidesPerView: 'auto',
                     spaceBetween: 8,
                     centeredSlides: true,
+                    
                 });
             }
         }" class="swiper swiper-gallery-industries">
             <div class="swiper-wrapper">
                 <div class="swiper-slide gallery-slide">
                     <img
-                        alt="This Project" src="https://images.unsplash.com/photo-1664575196412-ed801e8333a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" />
+                        class="w-full h-full object-cover" alt="This Project" src="/dist/img/ULUBELU_150615_IDRC 3.png" />
                 </div>
                 <div class="swiper-slide gallery-slide">
-                    <img alt="This Project" src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </div>
-                <div class="swiper-slide gallery-slide"
-                    <img alt="This Project" src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-2.jpg" />
                 </div>
                 <div class="swiper-slide gallery-slide">
-                    <img alt="This Project" src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-3.jpg" />
                 </div>
                 <div class="swiper-slide gallery-slide">
-                    <img alt="This Project" src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-4.jpg" />
                 </div>
                 <div class="swiper-slide gallery-slide">
-                    <img alt="This Project" src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-5.jpg" />
                 </div>
                 <div class="swiper-slide gallery-slide">
-                    <img alt="This Project" src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-6.jpg" />
                 </div>
                 <div class="swiper-slide gallery-slide">
-                    <img alt="This Project" src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+                <div class="swiper-slide gallery-slide">
+                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-8.jpg" />
                 </div>
             </div>
         </div>
@@ -305,7 +304,8 @@
         </div>
         <!-- Form -->
         <div class="flex flex-col text-left bg-white shadow-form px-6 py-8 gap-y-4  rounded-2xl">
-            <span class=" text-base text-primary font-normal ">Make sure the information you fill in is correct,
+            <span class=" text-base text-primary font-normal ">Make sure the information you fill in is
+                correct,
                 so we can contact you</span>
             <form class="flex flex-col gap-y-4 w-full" action="">
                 <span>
@@ -315,19 +315,20 @@
                         type="text" id="name" placeholder="Your name">
                 </span>
                 <span>
-                    <label class="form-label" for="project">Project</label>
+                    <label class="block text-base font-medium pb-[4px]" for="project">Project</label>
                     <input
                         class="w-full px-4 py-[10px] border-[1px] border-neutral400 rounded-xl placeholder:text-neutral400 placeholder:font-normal placeholder:text-base"
                         type="text" id="project" placeholder="Project">
                 </span>
                 <span>
-                    <label class="form-label" for="email">Email</label>
+                    <label class="block text-base font-medium pb-[4px]" for="email">Email</label>
                     <input
                         class="w-full px-4 py-[10px] border-[1px] border-neutral400 rounded-xl placeholder:text-neutral400 placeholder:font-normal placeholder:text-base"
                         type="text" id="email" placeholder="Email">
                 </span>
                 <span>
-                    <label class="form-label" for="phone-number">Phone Number (Optional)</label>
+                    <label class="block text-base font-medium pb-[4px]" for="phone-number">Phone Number
+                        (Optional)</label>
                     <input
                         class="w-full px-4 py-[10px] border-[1px] border-neutral400 rounded-xl placeholder:text-neutral400 placeholder:font-normal placeholder:text-base"
                         type="text" id="phone-number" placeholder="0812 3456 7890">

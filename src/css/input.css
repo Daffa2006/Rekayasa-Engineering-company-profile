@@ -315,33 +315,9 @@
 .swiper-re {
     @apply relative lg:pl-0 pl-4
 }
-
-.chevron-button {
-    @apply lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border
-}
 .chevron-button-shadow {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
 }
-.chevron-button {
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.chevron-button-next {
-    @apply -right-[28px]
-}
-
-.chevron-button-prev {
-    @apply -left-[28px]
-}
-
-.chevron-button-prev img {
-    @apply my-[17px] mr-[23px] ml-[21px]
-}
-
-.chevron-button-next img {
-    @apply my-[17px] mr-[21px] ml-[23px]
-}
-
 .re-slide {
     @apply lg:w-[305px] w-[200px]
 }

@@ -21,10 +21,32 @@
                                 urna egestas consectetur.</p>
                         </header>
                     </div>
-                    <div class="relative">
-                        <div class="swiper swiper-re-1 relative lg:pl-0 pl-4">
+                    <div x-data="{
+                        init() {
+                            new Swiper('.swiper-re', {
+                            slidesPerView: 'auto',
+                            spaceBetween: 20,
+                            navigation: false,
+                            breakpoints: {
+                              1024: {
+                                navigation: {
+                                  nextEl:'.chevron-button-next',
+                                  prevEl:'.chevron-button-prev',
+                                },
+                              }
+                            }
+                          });
+                        }
+                    }" class="relative">
+                    <div class="chevron-button-next -right-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
+                        <img class="my-[17px] mr-[21px] ml-[23px]" src="dist/img/chevron/chevron-right.svg" alt="Next">
+                    </div>
+                    <div class="chevron-button-prev -left-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
+                        <img class="my-[17px] mr-[23px] ml-[21px]" src="dist/img/chevron/chevron-left.svg" alt="Previous">
+                    </div>
+                        <div class="swiper swiper-re relative lg:pl-0 pl-4">
                             <div class="swiper-wrapper">
-                                <figure class="swiper-slide lg:w-[305px] w-[200px]">
+                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
                                     <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
                                         src="dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
                                         alt="Geothermal & Powerplan">
@@ -40,7 +62,7 @@
                                             platea sit urna egestas consectetur.</p>
                                     </figcaption>
                                 </figure>
-                                <figure class="swiper-slide re-slide">
+                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
                                     <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
                                         src="dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
                                         alt="Geothermal & Powerplan">
@@ -56,7 +78,7 @@
                                             platea sit urna egestas consectetur.</p>
                                     </figcaption>
                                 </figure>
-                                <figure class="swiper-slide re-slide">
+                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
                                     <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
                                         src="dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
                                         alt="Geothermal & Powerplan">
@@ -72,7 +94,7 @@
                                             platea sit urna egestas consectetur.</p>
                                     </figcaption>
                                 </figure>
-                                <figure class="swiper-slide re-slide">
+                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
                                     <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
                                         src="dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
                                         alt="Geothermal & Powerplan">
@@ -88,7 +110,7 @@
                                             platea sit urna egestas consectetur.</p>
                                     </figcaption>
                                 </figure>
-                                <figure class="swiper-slide re-slide">
+                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
                                     <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
                                         src="dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
                                         alt="Geothermal & Powerplan">
@@ -104,7 +126,7 @@
                                             platea sit urna egestas consectetur.</p>
                                     </figcaption>
                                 </figure>
-                                <figure class="swiper-slide re-slide">
+                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
                                     <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
                                         src="dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
                                         alt="Geothermal & Powerplan">
@@ -120,7 +142,7 @@
                                             platea sit urna egestas consectetur.</p>
                                     </figcaption>
                                 </figure>
-                                <figure class="swiper-slide re-slide">
+                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
                                     <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
                                         src="dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
                                         alt="Geothermal & Powerplan">
@@ -138,12 +160,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="chevron-button-next chevron-button-next-1 lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                            <img src="dist/img/chevron/chevron-right.svg" alt="Next">
-                        </div>
-                        <div class="chevron-button-prev chevron-button-prev-1 lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                            <img src="dist/img/chevron/chevron-left.svg" alt="Previous">
-                        </div>
+                        
                     </div>
                 </div>
             </section>

@@ -1,0 +1,70 @@
+<section class="flex justify-center items-center w-full h-80 relative lg:px-0 px-4 bg-warm-blue-gradient">
+    <img class="absolute top-0 left-0" src="dist/img/ornament/pattern-2.svg" alt="Ornament">
+    <div class="max-w-[658px] flex flex-col items-center gap-y-3 text-center">
+        <span class="text-3xl font-bold text-primary">Procurement</span>
+        <p class="text-base text-primary font-medium">Lorem ipsum dolor sit amet consectetur. Sed congue sed pulvinar
+            elementum amet bibendum dictum ornare tempor.</p>
+        <a class="bg-primary rounded text-lg font-bold py-3 px-8 text-white w-max" href="javascript:void(0)">Contact
+            Us</a>
+    </div>
+</section>
+<div class="py-8 flex flex-col items-center gap-y-8">
+    <section class="max-w-[1064px] w-full">
+        <div class=" flex flex-col gap-y-6">
+            <span class="lg:text-4xl text-3xl font-bold text-neutral700">Persyaratan Menjadi Vendor</span>
+            <ol class="ml-5 lg:text-lg text-base text-neutral600 font-medium list-decimal list-outside">
+                <li>Semua calon Vendor/ Subkontraktor wajib mengikuti penilaian dan verifikasi.</li>
+                <li>Penilaian dan verifikasi berlaku untuk 3 (tiga) tahun.</li>
+                <li>Bagi Vendor/ Subkontraktor yang pernah mengerjakan proyek RE dalam waktu 3 tahun terakhir, penilaian
+                    dan verifikasi bisa menggunakan hasil penilaian kinerja proyek yang ditanda tangani PM proyek
+                    terkait.</li>
+                <li>Item penilaian dalam penilaian dan verifikasi sesuai form checklist Penilaian dan Verifikasi Calon
+                    Vendor/ Subkontraktor</li>
+            </ol>
+        </div>
+    </section>
+    <section class="max-w-[1064px] w-full">
+        <div class="flex flex-col gap-y-6">
+            <span class="lg:text-4xl text-3xl font-bold text-neutral700">Aspek Penilaian</span>
+          
+            <div x-data="{ penilaian : [
+                'legalitas Perusahaan (Company Profile)',
+                'Akte Perusahaan',
+                'Surat Keterangan Domisili Perusahaan',
+                'Surat Izin Usaha Perusahaan (SIUP)',
+                'Nomor Pokok Wajib Pajak (NPWP)',
+                'SuratSurat Pengukuhan Pengusaha Kena Pajak',
+                'Bukti Pembayaran Pajak Terakhir',
+                'Neraca 3 Tahun Terakhir Perusahaan (Audited)',
+                'Riwayat Litigasi',
+                'Menerakan Sistem Manajemen Mutu',
+                'Menerapkan Sistem Manajemen K3',
+                'Menerapkan Sistem Manajemen Lingkungan',
+                'Sertifikat ISO 9001:2015',
+                'Sertifikat SMK3/ISO 45001:2018',
+                'Sertifikat ISO 14001:2015',
+                'Daftar Susunan Pemilik Modal',
+                'Brosur Barang yang Diproduksi',
+                'Lokasi/Layout Pabrik',
+                'Kapasitas Produksi/Fabrikasi/Supply',
+                'Sertifikat Material',
+                'Prosedur Test & Inspection',
+                'Prosedur Product Handling',
+                'Prosedur Instalasi dan Supervisi',
+                'Prosedur Marketing & Packaging',
+                'Daftar Pengalaman Perusahaan',
+                'Pengalaman dalam Proyek Sejenis',
+                'Komitmen/Kebijakan/Statement Letter K3LL Perusahaan'
+                ]
+            }"
+            class="border-[1px] rounded-3xl">
+                <template x-for ="(p,i) in penilaian">
+                    <div class="grid grid-cols-2  border-neutral400 overflow-hidden">
+                        <span class="" x-text="i + 1"></span>
+                        <span class="" x-text="p"></span>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+</div>

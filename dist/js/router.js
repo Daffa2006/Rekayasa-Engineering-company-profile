@@ -41,6 +41,11 @@ const urlRoutes = {
         template: "/dist/template/contact-us.html",
         title : "Contact Us",
         description : "Contact Us",
+    },
+    "/procurement" : {
+        template: "/dist/template/procurement.html",
+        title: "procurement",
+        description: "procurement"
     }
 }
 function urlRoute(event) {
