@@ -8,8 +8,7 @@
             Us</a>
     </div>
 </section>
-<div class="py-8 flex flex-col items-center gap-y-8">
-    <section class="max-w-[1064px] w-full">
+    <section class="py-8 mx-auto max-w-[1064px] w-full lg:px-0 px-4">
         <div class=" flex flex-col gap-y-6">
             <span class="lg:text-4xl text-3xl font-bold text-neutral700">Persyaratan Menjadi Vendor</span>
             <ol class="ml-5 lg:text-lg text-base text-neutral600 font-medium list-decimal list-outside">
@@ -23,11 +22,11 @@
             </ol>
         </div>
     </section>
-    <section class="max-w-[1064px] w-full">
+    <section class="pb-8 mx-auto max-w-[1064px] w-full lg:px-0 px-4">
         <div class="flex flex-col gap-y-6">
             <span class="lg:text-4xl text-3xl font-bold text-neutral700">Aspek Penilaian</span>
           
-            <div x-data="{ penilaian : [
+            <table x-data="{ penilaian : [
                 'legalitas Perusahaan (Company Profile)',
                 'Akte Perusahaan',
                 'Surat Keterangan Domisili Perusahaan',
@@ -57,14 +56,13 @@
                 'Komitmen/Kebijakan/Statement Letter K3LL Perusahaan'
                 ]
             }"
-            class="border-[1px] rounded-3xl">
+            class="font-medium text-lg text-neutral600 border-[1px] border-separate border-spacing-0 border-neutral400 rounded-3xl overflow-hidden">
                 <template x-for ="(p,i) in penilaian">
-                    <div class="grid grid-cols-2  border-neutral400 overflow-hidden">
-                        <span class="" x-text="i + 1"></span>
-                        <span class="" x-text="p"></span>
-                    </div>
+                    <tr class="tr-procurement">
+                        <td class="w-16 border-b-[1px] border-neutral400 text-center py-3" x-text="i + 1"></td>
+                        <td class="border-b-[1px] border-l-[1px] border-neutral400 py-3 px-4" x-text="p"></td>
+                    </tr>
                 </template>
-            </div>
+            </table>
         </div>
     </section>
-</div>

@@ -46,6 +46,19 @@ const urlRoutes = {
         template: "/dist/template/procurement.html",
         title: "procurement",
         description: "procurement"
+    },
+    "/sustainability" : { 
+        template : "/dist/template/sustainability.html"
+    },
+    "/sustainability/quality-policy" : {
+        template: "/dist/template/sustainability/quality-policy.html",
+        title: "Quality Policy",
+        description: "Quality Policy"
+    },
+    "/sustainability/hse" : {
+        template: "/dist/template/sustainability/hse.html",
+        title: "HSE",
+        description: "HSE"
     }
 }
 function urlRoute(event) {
@@ -58,8 +71,21 @@ function urlRoute(event) {
 async function urlLocationHandler() {
     let location = window.location.pathname;
     if (location.length === 0) {
-        location = "/";
-        
+        location = "/";   
+    }
+    if (location.includes('/sustainability')) {
+        const route = urlRoutes["/sustainability"] || urlRoutes[404];
+        const html = await fetch(route.template).then(response => response.text());
+        document.querySelector('.page-content').innerHTML = html;
+        if (location === '/sustainability') {
+            location = "/sustainability/quality-policy"
+        }
+        const routeSubPage = urlRoutes[location] || urlRoutes[404]
+        const subPageHTML = await fetch(routeSubPage.template).then(response => response.text());
+        document.querySelector('.sub-page').innerHTML = subPageHTML;
+        document.querySelector('title').textContent = routeSubPage.title;
+        document.querySelector('meta[name="description"]').setAttribute('content',routeSubPage.description)
+        return
     }
     const route = urlRoutes[location] || urlRoutes[404];
     const html = await fetch(route.template).then(response => response.text());

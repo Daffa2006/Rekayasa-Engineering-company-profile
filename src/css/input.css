@@ -342,7 +342,12 @@
     @apply lg:hidden block
 }
 
-
+.tr-procurement:nth-child(2) > td  {
+    @apply pt-6 
+}
+.tr-procurement:last-child > td {
+    @apply border-b-[0px] pb-6
+}
 @layer utilities {
     /* .calc-plus-155px {
     height: calc(100% + 155px) ;
