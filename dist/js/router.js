@@ -1,11 +1,3 @@
-document.addEventListener("click", (e) => {
-    const {target} = e
-    if(!target.matches('nav ul li a')) {
-        return 
-    }
-    e.preventDefault();
-    urlRoute();
-})
 const urlRoutes = {
     404 : {
         template: "/dist/template/404.html",
@@ -59,15 +51,28 @@ const urlRoutes = {
         template: "/dist/template/sustainability/hse.html",
         title: "HSE",
         description: "HSE"
+    },
+    "/sustainability/csr" : {
+        template: "/dist/template/sustainability/csr.html",
+        title: "CSR",
+        description: "CSR"
     }
 }
+document.addEventListener("click", (e) => {
+    const {target} = e
+    if(!target.matches('ul li a')) {
+        return 
+    }
+    e.preventDefault();
+    urlRoute();
+})
 function urlRoute(event) {
     event = event || window.event;
     event.preventDefault()
     window.history.pushState({},"",event.target.href);
+    console.log("test 2")
     urlLocationHandler()
 }
-
 async function urlLocationHandler() {
     let location = window.location.pathname;
     if (location.length === 0) {
@@ -79,19 +84,21 @@ async function urlLocationHandler() {
         document.querySelector('.page-content').innerHTML = html;
         if (location === '/sustainability') {
             location = "/sustainability/quality-policy"
+            window.location.pathname = location;
         }
         const routeSubPage = urlRoutes[location] || urlRoutes[404]
         const subPageHTML = await fetch(routeSubPage.template).then(response => response.text());
         document.querySelector('.sub-page').innerHTML = subPageHTML;
         document.querySelector('title').textContent = routeSubPage.title;
-        document.querySelector('meta[name="description"]').setAttribute('content',routeSubPage.description)
+        document.querySelector('meta[name="description"]').setAttribute('content',routeSubPage.description);
+        inSustainability = false;
         return
     }
     const route = urlRoutes[location] || urlRoutes[404];
     const html = await fetch(route.template).then(response => response.text());
     document.querySelector('.page-content').innerHTML = html;
     document.querySelector('title').textContent = route.title;
-    document.querySelector('meta[name="description"]').setAttribute('content',route.description)
+    document.querySelector('meta[name="description"]').setAttribute('content',route.description);
 }
 window.onpopstate = urlLocationHandler;
 window.route = urlRoute;

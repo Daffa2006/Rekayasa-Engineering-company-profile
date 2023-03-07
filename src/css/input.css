@@ -348,6 +348,10 @@
 .tr-procurement:last-child > td {
     @apply border-b-[0px] pb-6
 }
+
+.sustainability-active-link {
+    @apply rounded-xl bg-blue50 text-primary
+}
 @layer utilities {
     /* .calc-plus-155px {
     height: calc(100% + 155px) ;
@@ -418,5 +422,8 @@
     }
     .inspection-overlay-mobile {
         background: linear-gradient(171.74deg, #5D7ABE 70.27%, rgba(93, 122, 190, 0) 84.72%);
+    }
+    .sustainability-shadow-pagination {
+        box-shadow: 0px 4px 12px rgba(68, 94, 156, 0.12);
     }
 }

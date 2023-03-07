@@ -27,6 +27,7 @@ module.exports = {
         blue700: "#445E9C",
         "blue-fade": "#ECF1FF",
         blue900:"#1C2E58",
+        blue200: "#C7D8FF",
       },
     },
   },
