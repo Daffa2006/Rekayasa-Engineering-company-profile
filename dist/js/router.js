@@ -90,7 +90,7 @@ const urlRoutes = {
 }
 document.addEventListener("click", (e) => {
     const {target} = e
-    if(!target.matches('ul li a')) {
+    if(!target.matches('a')) {
         return 
     }
     e.preventDefault();
