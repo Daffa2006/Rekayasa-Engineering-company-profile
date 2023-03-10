@@ -1,8 +1,7 @@
 <section class="lg:relative overflow-x-hidden pb-16">
-    <img class="lg:block hidden absolute -right-[3.7%] top-[9%]" src="/dist/img/ornament/Pattern.svg"
-        alt="Pattern">
+    <img class="lg:block hidden absolute -right-[3.7%] top-[9%]" src="/dist/img/ornament/Pattern.svg" alt="Pattern">
     <div
-        class="flex lg:flex-row-reverse lg:items-center lg:justify-between lg:pl-20 lg:pr-[151px] px-4 flex-col justify-center ">
+        class="flex lg:flex-row-reverse lg:items-center lg:justify-between lg:pl-20 lg:pr-[151px] px-4 flex-col justify-center max-w-[1440px] mx-auto">
         <div class=" static lg:m-0  hero-img  mx-auto mb-[24px]">
             <img class="h-auto lg:w-[396px] w-[285px]" src="/dist/img/person/hero-people.png" alt="Hero Image">
         </div>
@@ -59,13 +58,14 @@
         this.$el.classList.add('slide-isClicked')
     } }">
     <div class="swiper swiper-industries cursor-pointer">
-        <div  x-ref="sliderIndustries" class="swiper-wrapper slider-industries ">
+        <div x-ref="sliderIndustries" class="swiper-wrapper slider-industries ">
             <div @click="clearThenSet" class="swiper-slide">
-                <img  class="swiper-slide__img  w-full h-full" src="/dist/img/geothermal.png" alt="Project" />
+                <img class="swiper-slide__img  w-full h-full" src="/dist/img/geothermal.png" alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img w-full h-full" src="/dist/img/ULUBELU_150615_IDRC (1).png" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="/dist/img/ULUBELU_150615_IDRC (1).png"
+                    alt="Project" />
                 <span class="slider-title">Oil & Gas</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
@@ -77,27 +77,33 @@
                 <span class="slider-title">Petrochemical & Industry</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img w-full h-full" src="/dist/img/daniel-wiadro-GAEvM4qvlBk-unsplash.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="/dist/img/daniel-wiadro-GAEvM4qvlBk-unsplash.jpg"
+                    alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-6.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-6.jpg"
+                    alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-7.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-7.jpg"
+                    alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-8.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-8.jpg"
+                    alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-9.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-9.jpg"
+                    alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
             <div @click="clearThenSet" class="swiper-slide">
-                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-10.jpg" alt="Project" />
+                <img class="swiper-slide__img w-full h-full" src="https://swiperjs.com/demos/images/nature-10.jpg"
+                    alt="Project" />
                 <span class="slider-title">Geothermal & Powerplan</span>
             </div>
         </div>
@@ -111,47 +117,70 @@
         </div>
         <div x-data="
         {
+            gallerySlide : 'transition-all duration-300 ease-in-out filter grayscale-[1] lg:!w-[300px] lg:!h-[300px] !w-[192px] !h-[192px]',
             init() {
                 new Swiper('.swiper-gallery-industries', {
-                    loop: true,
+                   loop : true,
                     slidesPerView: 'auto',
                     spaceBetween: 8,
                     centeredSlides: true,
-                    
                 });
             }
-        }" class="swiper swiper-gallery-industries">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide gallery-slide">
-                    <img
-                        class="w-full h-full object-cover" alt="This Project" src="/dist/img/ULUBELU_150615_IDRC 3.png" />
+        }"
+            class="swiper swiper-gallery-industries relative after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-0 after:bg-gradient-to-l after:from-white after:to-transparent lg:after:w-[170px] after:w-[52px] after:z-30 before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:bg-gradient-to-r before:from-white before:to-transparent lg:before:w-[170px] before:w-[52px] before:z-30 max-w-[1440px] lg:!h-[455px] !h-[256px]">
+            <div class="swiper-wrapper flex items-center relative">
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="/dist/img/ULUBELU_150615_IDRC 3.png" />
                 </div>
-                <div class="swiper-slide gallery-slide">
-                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-2.jpg" />
                 </div>
-                <div class="swiper-slide gallery-slide">
-                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-3.jpg" />
                 </div>
-                <div class="swiper-slide gallery-slide">
-                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-4.jpg" />
                 </div>
-                <div class="swiper-slide gallery-slide">
-                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-5.jpg" />
                 </div>
-                <div class="swiper-slide gallery-slide">
-                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-6.jpg" />
                 </div>
-                <div class="swiper-slide gallery-slide">
-                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-7.jpg" />
                 </div>
-                <div class="swiper-slide gallery-slide">
-                    <img class="w-full h-full object-cover" alt="This Project" src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </div>
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </div>
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+                <div class="swiper-slide gallery-slide" :class="gallerySlide">
+                    <img class="w-full h-full object-cover" alt="This Project"
+                        src="https://swiperjs.com/demos/images/nature-8.jpg" />
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <section class="bg-blue50 py-16 overflow-hidden flex flex-col gap-y-8">
     <!-- Judul Section -->
     <header class=" mx-4 pb-2 border-b-[1px] border-neutral200">
@@ -195,28 +224,40 @@
 <section class="py-16 px-4 relative ">
     <img class="lg:block hidden absolute bottom-1/3 -left-[47px] -z-10" src="/dist/img/ornament/Pattern.svg"
         alt="Pattern">
-    <div class="relative flex mx-auto flex-col items-center gap-y-8 text-center w-full max-w-[846px]">
-        <div class="video-container relative w-full h-auto rounded-3xl overflow-clip ">
-            <video class="video-player object-cover">
-                <source src="/dist/video/ChatGPT _ AI yang _katanya_ bisa MENGGANTIKAN PROGRAMMER 🤯.mp4">
-            </video>
-            <div
-                class="video-overlay absolute flex flex-col gap-y-6 items-center justify-center inset-0 w-full h-[87%]">
-                <div>
-                    <img src="/dist/img/logo/logo-re-letter-R.png" alt="Logo Rekayasa Engineering">
-                </div>
+    <div  class="relative flex mx-auto flex-col items-center gap-y-8 text-center w-full max-w-[846px]">
+        <div x-data="{
+            playVid() {
+                $refs.videoOverlay.classList.add('hidden')
+                $refs.video.click();
+            }
+        }"  class="video-container relative w-full h-[400px] rounded-3xl overflow-clip ">
+            <!-- <video class="video-player object-cover">
+                <source src="https://www.youtube.com/embed/oDunKl1QQu0">
+            </video> -->
+            
+            <iframe x-init="$el.click()" allow="autoplay; encrypted-media" allowfullscreen x-ref="video" frameborder="0" class="w-full h-full"
+                src="https://www.youtube.com/embed/oDunKl1QQu0?autoplay=1">
+            </iframe>
+            <div x-ref="videoOverlay" class="h-full"  @click="playVid()">
+                <img class="object-cover  w-full inset-0 absolute " src="/dist/video/video-overlay.png" alt="Video Thumbnail">
                 <div
-                    class=" backdrop-blur-[2px] flex items-center box-border justify-center w-[48px] h-[48px] bg-video-btn rounded-full">
-                    <svg class="ml-[18px] mr-[13.5px] w-[16.5px] h-[19.5px] " viewBox="0 0 18 20" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M16.2781 8.74367L2.77813 0.503046C2.55326 0.360544 2.29356 0.282556 2.02738 0.277596C1.76121 0.272636 1.49878 0.340895 1.26876 0.474921C1.03533 0.60299 0.840738 0.791608 0.705455 1.02093C0.570172 1.25025 0.4992 1.5118 0.500007 1.77805V18.278C0.4992 18.5443 0.570172 18.8058 0.705455 19.0352C0.840738 19.2645 1.03533 19.4531 1.26876 19.5812C1.49878 19.7152 1.76121 19.7835 2.02738 19.7785C2.29356 19.7735 2.55326 19.6955 2.77813 19.553L16.2781 11.3124C16.4994 11.1789 16.6824 10.9905 16.8095 10.7655C16.9365 10.5405 17.0033 10.2865 17.0033 10.028C17.0033 9.76963 16.9365 9.5156 16.8095 9.29057C16.6824 9.06555 16.4994 8.87716 16.2781 8.74367Z"
-                            fill="white" />
-                    </svg>
+                    class="video-overlay absolute flex flex-col gap-y-6 items-center justify-center inset-0 w-full h-full">
+                    <div>
+                        <img src="/dist/img/logo/logo-re-letter-R.png" alt="Logo Rekayasa Engineering">
+                    </div>
+                    <div
+                        class=" backdrop-blur-[2px] flex items-center box-border justify-center w-[48px] h-[48px] bg-video-btn rounded-full">
+                        <svg class="ml-[18px] mr-[13.5px] w-[16.5px] h-[19.5px] " viewBox="0 0 18 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.2781 8.74367L2.77813 0.503046C2.55326 0.360544 2.29356 0.282556 2.02738 0.277596C1.76121 0.272636 1.49878 0.340895 1.26876 0.474921C1.03533 0.60299 0.840738 0.791608 0.705455 1.02093C0.570172 1.25025 0.4992 1.5118 0.500007 1.77805V18.278C0.4992 18.5443 0.570172 18.8058 0.705455 19.0352C0.840738 19.2645 1.03533 19.4531 1.26876 19.5812C1.49878 19.7152 1.76121 19.7835 2.02738 19.7785C2.29356 19.7735 2.55326 19.6955 2.77813 19.553L16.2781 11.3124C16.4994 11.1789 16.6824 10.9905 16.8095 10.7655C16.9365 10.5405 17.0033 10.2865 17.0033 10.028C17.0033 9.76963 16.9365 9.5156 16.8095 9.29057C16.6824 9.06555 16.4994 8.87716 16.2781 8.74367Z"
+                                fill="white" />
+                        </svg>
 
-                </div>
-                <div>
-                    <span class="text-base text-neutral700 font-medium">Rekayasa Engineering Video</span>
+                    </div>
+                    <div>
+                        <span class="text-base text-neutral700 font-medium">Rekayasa Engineering Video</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -244,8 +285,8 @@
 </section>
 
 <!-- Why Us -->
-<section class="why-us-section">
-    <div class="why-us-layout">
+<section class="py-16 relative after:content-[''] after:absolute after:bg-blue50 after:-z-10 after:inset-0 after:h-1/2">
+    <div class="lg:px-20 px-4 max-w-[1440px] mx-auto flex flex-col gap-y-8 items-center text-center">
         <header class="lg:w-[507px]">
             <h2 class="text-3xl pb-3 text-blue900 font-bold">Why Us</h2>
             <p class="lg:text-base why-us-description">Tim Engineering kami yang handal dan berkualitas akan
@@ -254,40 +295,46 @@
                 produk yang berkualitas</p>
         </header>
         <!-- Why us cards -->
-        <div class="why-us-container-cards ">
-            <div class="why-us-cards">
+        <div class="flex flex-row justify-center flex-wrap gap-x-8 lg:w-full gap-y-8 items-center text-center">
+            <div
+                class="flex lg:w-[296px] h-[352px] w-[328px] flex-col items-center bg-white py-16 px-4 text-center rounded-xl shadow-primary">
                 <img src="/dist/img/whyUs/engineer-berpengalaman.svg" alt="Engineer Berpengalaman">
-                <span class="why-us-title">Engineer Berpengalaman</span>
-                <p class="why-us-description">Berpengalaman dibidangnya dalam mengerjakan berbagai macam proyek
+                <span class="text-base text-black font-bold pt-4 pb-2">Engineer Berpengalaman</span>
+                <p class="text-sm text-neutral900 font-normal">Berpengalaman dibidangnya dalam mengerjakan berbagai
+                    macam proyek
                     engineering dari kecil dan sederhana hingga besar dan rumit</p>
             </div>
-            <div class="why-us-cards">
+            <div
+                class="flex lg:w-[296px] h-[352px] w-[328px] flex-col items-center bg-white py-16 px-4 text-center rounded-xl shadow-primary">
                 <img src="/dist/img/whyUs/portfolio-nasional.svg" alt="Portfolio Nasional">
-                <span class="why-us-title">Portfolio Nasional</span>
-                <p class="why-us-description">Kami membangun reputasi dan kerja sama yang baik dengan memberikan
+                <span class="text-base text-black font-bold pt-4 pb-2">Portfolio Nasional</span>
+                <p class="text-sm text-neutral900 font-normal">Kami membangun reputasi dan kerja sama yang baik dengan
+                    memberikan
                     layanan engineering dan bantuan teknis tepat guna untuk di setiap proyek yang kami tangani,
                     terutama di wilayah Indonesia</p>
             </div>
-            <div class="why-us-cards">
+            <div
+                class="flex lg:w-[296px] h-[352px] w-[328px] flex-col items-center bg-white py-16 px-4 text-center rounded-xl shadow-primary">
                 <img src="/dist/img/whyUs/software-terlisensi-resmi.svg" alt="Software terlisensi resmi">
-                <span class="why-us-title">Software terlisensi resmi</span>
-                <p class="why-us-description">Semua Software yang kami gunakan untuk mengerjakan proyek
+                <span class="text-base text-black font-bold pt-4 pb-2">Software terlisensi resmi</span>
+                <p class="text-sm text-neutral900 font-normal">Semua Software yang kami gunakan untuk mengerjakan proyek
                     engineering telah terlisensi dan tersertifikasi resmi</p>
             </div>
-            <div class="why-us-cards">
+            <div
+                class="flex lg:w-[296px] h-[352px] w-[328px] flex-col items-center bg-white py-16 px-4 text-center rounded-xl shadow-primary">
                 <img src="/dist/img/whyUs/kompetensi-tim-3D.svg" alt="Kompetensi tim 3D">
-                <span class="why-us-title">Kompetensi tim 3D</span>
-                <p class="why-us-description">Tim 3D kami yang kompeten dan berpengalaman dibidangnya untuk
+                <span class="text-base text-black font-bold pt-4 pb-2">Kompetensi tim 3D</span>
+                <p class="text-sm text-neutral900 font-normal">Tim 3D kami yang kompeten dan berpengalaman dibidangnya
+                    untuk
                     mengerjakan proyek engineering </p>
             </div>
         </div>
     </div>
 </section>
-
 <!-- Request Call Back -->
-<section class="py-16 px-4">
+<section class="py-16">
     <div
-        class="flex lg:flex-row lg:px-20 lg:gap-x-5 lg:justify-center flex-col gap-y-8 items-center text-center">
+        class="max-w-[1440px] px-4 mx-auto flex lg:flex-row lg:px-20 lg:gap-x-5 lg:justify-center flex-col gap-y-8 items-center text-center">
         <div class="max-w-[738px] w-full flex flex-col items-center gap-y-6 ">
             <header class="max-w-[521px]">
                 <h2 class="lg:text-4xl text-3xl pb-3 text-blue900 font-bold">Request Call Back</h2>
@@ -298,8 +345,7 @@
             <div
                 class="flex items-center justify-center relative after:content-[''] after:block after:absolute after:top-[30%] after:left-[12%] after:-z-10 after:rounded-full after:border-orange500 after:border-[2px] after:w-[242px] after:h-[242px]">
                 <img src="/dist/img/person/call-people.png" alt="Request Call Back">
-                <img class="absolute -z-20 -left-[1.5%] top-[15%]" src="/dist/img/ornament/Pattern.svg"
-                    alt="Pattern">
+                <img class="absolute -z-20 -left-[1.5%] top-[15%]" src="/dist/img/ornament/Pattern.svg" alt="Pattern">
             </div>
         </div>
         <!-- Form -->
@@ -415,11 +461,10 @@
                 about how we can help.</p>
         </header>
         <div class="flex lg:flex-row lg:gap-x-6 lg:justify-center flex-col w-full gap-y-6">
-            <a class="sm:px-8 sm:w-auto w-full text-white font-bold bg-orange400 py-[10px] rounded "
-                href="#">Contact Us</a>
-            <a class="sm:px-8 sm:w-auto w-full text-orange400 font-bold bg-white py-[10px] rounded "
-                href="#">Company Profile</a>
+            <a class="sm:px-8 sm:w-auto w-full text-white font-bold bg-orange400 py-[10px] rounded " href="#">Contact
+                Us</a>
+            <a class="sm:px-8 sm:w-auto w-full text-orange400 font-bold bg-white py-[10px] rounded " href="#">Company
+                Profile</a>
         </div>
     </div>
 </section>
-

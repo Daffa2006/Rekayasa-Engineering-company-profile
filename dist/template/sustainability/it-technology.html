@@ -1,0 +1,46 @@
+<div class="flex flex-wrap  justify-center gap-y-[60px] lg:pb-[204px] pb-16">
+    <p class="font-medium text-lg text-neutral600">PTRE realizes the importance of technology in carrying out its
+        business by investing heavily on state of the art IT infrastructure to ensure an effective system of
+        communication and collaboration. In order to accelerate working progress, PTRE utilizes information system
+        technology which using intranet and internet network system. Therefore, all employees could communicate by
+        electronic mail and construct an integrated information technology.</p>
+    <div x-data="{
+        images : 
+        [{
+            src : '/dist/img/sustainability/it-technology/autodesk-inventor.png',
+            alt : 'Autodesk Inventor'
+        },
+        {
+            src : '/dist/img/sustainability/it-technology/aveva.png',
+            alt : 'AVEVA Continual Progression'
+        },
+        {
+            src : '/dist/img/sustainability/it-technology/codeware.png',
+            alt : 'CODEWARE'
+        },
+        {
+            src : '/dist/img/sustainability/it-technology/codeware-compress.png',
+            alt : 'CODEWARE COMPRESS'
+        },
+        {
+            src : '/dist/img/sustainability/it-technology/microsoft.png',
+            alt : 'Microsoft'
+        },
+        {
+            src : '/dist/img/sustainability/it-technology/MicroStation.png',
+            alt : 'Bentley MicroStation'
+        },
+        {
+            src : '/dist/img/sustainability/it-technology/MicroStation-2.png',
+            alt : 'Bentley MicroStation'
+        },
+        {
+            src : '/dist/img/sustainability/it-technology/etap.png',
+            alt : 'etap'
+        }]
+    }" class="flex flex-wrap lg:gap-y-0 gap-y-6 gap-x-5 justify-center">
+        <template x-for="img in images">
+            <img class="w-[305px] h-auto object-contain" :src="img.src" :alt="img.alt">
+        </template>
+    </div>
+</div>

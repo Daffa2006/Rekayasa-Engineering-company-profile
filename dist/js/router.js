@@ -24,6 +24,16 @@ const urlRoutes = {
         title : "Our Project",
         description : "Our Project",
     },
+    "/detail-project" : {
+        template: "/dist/template/detail-project.html",
+        title : "Detail Project",
+        description : "Detail Project",
+    },
+    "/news" : {
+        template: "/dist/template/news.html",
+        title : "News",
+        description : "News",
+    },
     "sustainability" : {
         template: "/dist/template/sustainability.html",
         title : "Sustainability",
@@ -38,6 +48,11 @@ const urlRoutes = {
         template: "/dist/template/procurement.html",
         title: "procurement",
         description: "procurement"
+    },
+    "/csr-report" : {
+        template: "/dist/template/csr-report.html",
+        title: "CSR Report",
+        description: "CSR Report"
     },
     "/sustainability" : { 
         template : "/dist/template/sustainability.html"
@@ -56,6 +71,21 @@ const urlRoutes = {
         template: "/dist/template/sustainability/csr.html",
         title: "CSR",
         description: "CSR"
+    },
+    "/sustainability/certification" : {
+        template: "/dist/template/sustainability/certification.html",
+        title: "Certification",
+        description: "Certification"
+    },
+    "/sustainability/it-technology" : {
+        template: "/dist/template/sustainability/it-technology.html",
+        title: "IT Technology",
+        description: "IT Technology"
+    },
+    "/sustainability/gcg" : {
+        template: "/dist/template/sustainability/gcg.html",
+        title: "IT Technology",
+        description: "IT Technology"
     }
 }
 document.addEventListener("click", (e) => {
@@ -73,15 +103,18 @@ function urlRoute(event) {
     console.log("test 2")
     urlLocationHandler()
 }
+let inSustainability = false;
 async function urlLocationHandler() {
     let location = window.location.pathname;
     if (location.length === 0) {
         location = "/";   
     }
     if (location.includes('/sustainability')) {
-        const route = urlRoutes["/sustainability"] || urlRoutes[404];
-        const html = await fetch(route.template).then(response => response.text());
-        document.querySelector('.page-content').innerHTML = html;
+        if (!inSustainability) {
+            const route = urlRoutes["/sustainability"] || urlRoutes[404];
+            const html = await fetch(route.template).then(response => response.text());
+            document.querySelector('.page-content').innerHTML = html;
+        }
         if (location === '/sustainability') {
             location = "/sustainability/quality-policy"
             window.location.pathname = location;
@@ -91,8 +124,10 @@ async function urlLocationHandler() {
         document.querySelector('.sub-page').innerHTML = subPageHTML;
         document.querySelector('title').textContent = routeSubPage.title;
         document.querySelector('meta[name="description"]').setAttribute('content',routeSubPage.description);
-        inSustainability = false;
+        inSustainability = true;
         return
+    } else {
+        inSustainability = false;
     }
     const route = urlRoutes[location] || urlRoutes[404];
     const html = await fetch(route.template).then(response => response.text());

@@ -15,6 +15,7 @@ module.exports = {
         orange400: "#FF9942",
         orange500: "#F07B17",
         neutral200: "#DEDEDE",
+        neutral300: "#F0F0F0",
         neutral400: "#BFBFBF",
         neutral500: "#737373",
         neutral700: "#262626",

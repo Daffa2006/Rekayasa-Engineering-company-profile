@@ -1,634 +1,194 @@
 <section class="flex justify-center items-center w-full h-80 relative lg:px-0 px-4 bg-warm-blue-gradient">
-            <img class="absolute top-0 left-0" src="/dist/img/ornament/pattern-2.svg" alt="Ornament">
-            <div class="max-w-[658px] flex flex-col items-center gap-y-3 text-center">
-                <span class="text-3xl font-bold text-primary">OUR PROJECT</span>
-                <p class="text-base text-primary font-medium">We present our innovative project across the archipelago to your contentment</p>
-                <a class="bg-primary rounded text-lg font-bold py-3 px-8 text-white w-max"
-                    href="javascript:void(0)">Contact Us</a>
+    <img class="absolute top-0 left-0" src="/dist/img/ornament/pattern-2.svg" alt="Ornament">
+    <div class="max-w-[658px] flex flex-col items-center gap-y-3 text-center">
+        <span class="text-3xl font-bold text-primary">OUR PROJECT</span>
+        <p class="text-base text-primary font-medium">We present our innovative project across the archipelago to your
+            contentment</p>
+        <a class="bg-primary rounded text-lg font-bold py-3 px-8 text-white w-max" href="/detail-project">Contact Us</a>
+    </div>
+</section>
+<template x-for="(item, index) in 4" :key="index">
+    <section :class="[index === 0 ? 'pt-16' : '', index === 3 ? 'pb-16' :'']"
+        class="project-slider lg:px-20 max-w-[1440px] mx-auto">
+        <div class="flex flex-col gap-y-6">
+            <div class="lg:px-0 flex items-center lg:gap-x-8 gap-x-3 px-4">
+                <div class="shrink-0 lg:w-24 lg:h-24 w-16 h-16 bg-blue50 rounded-full flex items-center justify-center">
+                    <img src="/dist/img/our-project/geothermal&powerplan.svg" alt="Geothermal & Powerplan">
+                </div>
+                <header class="flex flex-col gap-y-2 lg:max-w-[630px]">
+                    <span class="lg:text-2xl text-lg text-neutral700 font-bold">Geothermal & Powerplan</span>
+                    <p class="lg:text-base text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
+                        Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis. Eu platea sit
+                        urna egestas consectetur.</p>
+                </header>
             </div>
-        </section>
-        <div class="projects py-16">
-            <section class="lg:px-20">
-                <div class="flex flex-col gap-y-6">
-                    <div class="lg:px-0 flex items-center lg:gap-x-8 gap-x-3 px-4">
-                        <div class="shrink-0 lg:w-24 lg:h-24 w-16 h-16 bg-blue50 rounded-full flex items-center justify-center">
-                            <img src="/dist/img/our-project/geothermal&powerplan.svg" alt="Geothermal & Powerplan">
-                        </div>
-                        <header class="flex flex-col gap-y-2 lg:max-w-[630px]">
-                            <span class="lg:text-2xl text-lg text-neutral700 font-bold">Geothermal & Powerplan</span>
-                            <p class="lg:text-base text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis. Eu platea sit
-                                urna egestas consectetur.</p>
-                        </header>
-                    </div>
-                    <div x-data="{
-                        init() {
-                            new Swiper('.swiper-re', {
-                            slidesPerView: 'auto',
-                            spaceBetween: 20,
-                            breakpoints: {
-                              1024: {
-                                navigation: {
-                                  nextEl:'.chevron-button-next',
-                                  prevEl:'.chevron-button-prev',
-                                },
-                              }
+            <div class="relative">
+                <div
+                :class="'chevron-button-next-' + index" class="chevron-button-next -right-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
+                    <img class="my-[17px] mr-[21px] ml-[23px]" src="/dist/img/chevron/chevron-right.svg" alt="Next">
+                </div>
+                <div
+                   :class="'chevron-button-prev-' + index" class=" -left-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
+                    <img class="my-[17px] mr-[23px] ml-[21px]" src="/dist/img/chevron/chevron-left.svg" alt="Previous">
+                </div>
+                <div x-data=" {
+                    swiperInit(index) {
+                        new Swiper(`.swiper-re-${index}`, {
+                        freeMode : true,
+                        slidesPerView: 'auto',
+                        spaceBetween: 20,
+                        breakpoints: {
+                          1024: {
+                            navigation: {
+                              nextEl:`.chevron-button-next-${index}`,
+                              prevEl:`.chevron-button-prev-${index}`,
                             }
-                          });
+                          }
                         }
-                    }" class="relative">
-                    <div class="chevron-button-next -right-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                        <img class="my-[17px] mr-[21px] ml-[23px]" src="/dist/img/chevron/chevron-right.svg" alt="Next">
-                    </div>
-                    <div class="chevron-button-prev -left-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                        <img class="my-[17px] mr-[23px] ml-[21px]" src="/dist/img/chevron/chevron-left.svg" alt="Previous">
-                    </div>
-                        <div class="swiper swiper-re relative lg:pl-0 pl-4">
-                            <div class="swiper-wrapper">
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        
+                      });
+                    }
+                }" x-init="$nextTick(() => swiperInit(index))" :class="'swiper-re-' + index" class="swiper  relative lg:pl-0 pl-4">
+                    <div class="swiper-wrapper">
+                        <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
+                            <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
+                                src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
+                                alt="Geothermal & Powerplan">
+                            <figcaption class="pt-4 flex flex-col gap-y-2">
+                                <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal &
+                                    Powerplan</span>
+                                <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur. Ultricies sed
+                                    vitae gravida aliquam. . .
+                                </p>
+                                <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit
+                                    amet consectetur.
+                                    Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
+                                    Eu
+                                    platea sit urna egestas consectetur.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
+                            <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
+                                src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
+                                alt="Geothermal & Powerplan">
+                            <figcaption class="pt-4 flex flex-col gap-y-2">
+                                <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal &
+                                    Powerplan</span>
+                                <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur. Ultricies sed
+                                    vitae gravida aliquam. . .
+                                </p>
+                                <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit
+                                    amet consectetur.
+                                    Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
+                                    Eu
+                                    platea sit urna egestas consectetur.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
+                            <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
+                                src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
+                                alt="Geothermal & Powerplan">
+                            <figcaption class="pt-4 flex flex-col gap-y-2">
+                                <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal &
+                                    Powerplan</span>
+                                <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur. Ultricies sed
+                                    vitae gravida aliquam. . .
+                                </p>
+                                <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit
+                                    amet consectetur.
+                                    Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
+                                    Eu
+                                    platea sit urna egestas consectetur.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
+                            <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
+                                src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
+                                alt="Geothermal & Powerplan">
+                            <figcaption class="pt-4 flex flex-col gap-y-2">
+                                <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal &
+                                    Powerplan</span>
+                                <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur. Ultricies sed
+                                    vitae gravida aliquam. . .
+                                </p>
+                                <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit
+                                    amet consectetur.
+                                    Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
+                                    Eu
+                                    platea sit urna egestas consectetur.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
+                            <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
+                                src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
+                                alt="Geothermal & Powerplan">
+                            <figcaption class="pt-4 flex flex-col gap-y-2">
+                                <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal &
+                                    Powerplan</span>
+                                <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur. Ultricies sed
+                                    vitae gravida aliquam. . .
+                                </p>
+                                <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit
+                                    amet consectetur.
+                                    Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
+                                    Eu
+                                    platea sit urna egestas consectetur.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
+                            <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
+                                src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
+                                alt="Geothermal & Powerplan">
+                            <figcaption class="pt-4 flex flex-col gap-y-2">
+                                <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal &
+                                    Powerplan</span>
+                                <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur. Ultricies sed
+                                    vitae gravida aliquam. . .
+                                </p>
+                                <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit
+                                    amet consectetur.
+                                    Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
+                                    Eu
+                                    platea sit urna egestas consectetur.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
+                            <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
+                                src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
+                                alt="Geothermal & Powerplan">
+                            <figcaption class="pt-4 flex flex-col gap-y-2">
+                                <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal &
+                                    Powerplan</span>
+                                <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur. Ultricies sed
+                                    vitae gravida aliquam. . .
+                                </p>
+                                <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit
+                                    amet consectetur.
+                                    Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
+                                    Eu
+                                    platea sit urna egestas consectetur.</p>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
-            </section>
-            <hr class="line-between-swiper lg:mx-20 lg:my-8 mx-4 my-6 px-4">
-            <section class="lg:px-20">
-                <div class="flex flex-col gap-y-6">
-                    <div class="lg:px-0 flex items-center lg:gap-x-8 gap-x-3 px-4">
-                        <div class="shrink-0 lg:w-24 lg:h-24 w-16 h-16 bg-blue50 rounded-full flex items-center justify-center">
-                            <img src="/dist/img/our-project/geothermal&powerplan.svg" alt="Geothermal & Powerplan">
-                        </div>
-                        <header class="flex flex-col gap-y-2 lg:max-w-[630px]">
-                            <span class="lg:text-2xl text-lg text-neutral700 font-bold">Geothermal & Powerplan</span>
-                            <p class="lg:text-base text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis. Eu platea sit
-                                urna egestas consectetur.</p>
-                        </header>
-                    </div>
-                    <div x-data="{
-                        init() {
-                            new Swiper('.swiper-re', {
-                            slidesPerView: 'auto',
-                            spaceBetween: 20,
-                            breakpoints: {
-                              1024: {
-                                navigation: {
-                                  nextEl:'.chevron-button-next',
-                                  prevEl:'.chevron-button-prev',
-                                },
-                              }
-                            }
-                          });
-                        }
-                    }" class="relative">
-                    <div class="chevron-button-next -right-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                        <img class="my-[17px] mr-[21px] ml-[23px]" src="/dist/img/chevron/chevron-right.svg" alt="Next">
-                    </div>
-                    <div class="chevron-button-prev -left-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                        <img class="my-[17px] mr-[23px] ml-[21px]" src="/dist/img/chevron/chevron-left.svg" alt="Previous">
-                    </div>
-                        <div class="swiper swiper-re relative lg:pl-0 pl-4">
-                            <div class="swiper-wrapper">
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
-            <hr class="line-between-swiper lg:mx-20 lg:my-8 mx-4 my-6 px-4">
-            <section class="lg:px-20">
-                <div class="flex flex-col gap-y-6">
-                    <div class="lg:px-0 flex items-center lg:gap-x-8 gap-x-3 px-4">
-                        <div class="shrink-0 lg:w-24 lg:h-24 w-16 h-16 bg-blue50 rounded-full flex items-center justify-center">
-                            <img src="/dist/img/our-project/geothermal&powerplan.svg" alt="Geothermal & Powerplan">
-                        </div>
-                        <header class="flex flex-col gap-y-2 lg:max-w-[630px]">
-                            <span class="lg:text-2xl text-lg text-neutral700 font-bold">Geothermal & Powerplan</span>
-                            <p class="lg:text-base text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis. Eu platea sit
-                                urna egestas consectetur.</p>
-                        </header>
-                    </div>
-                    <div x-data="{
-                        init() {
-                            new Swiper('.swiper-re', {
-                            slidesPerView: 'auto',
-                            spaceBetween: 20,
-                            breakpoints: {
-                              1024: {
-                                navigation: {
-                                  nextEl:'.chevron-button-next',
-                                  prevEl:'.chevron-button-prev',
-                                },
-                              }
-                            }
-                          });
-                        }
-                    }" class="relative">
-                    <div class="chevron-button-next -right-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                        <img class="my-[17px] mr-[21px] ml-[23px]" src="/dist/img/chevron/chevron-right.svg" alt="Next">
-                    </div>
-                    <div class="chevron-button-prev -left-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                        <img class="my-[17px] mr-[23px] ml-[21px]" src="/dist/img/chevron/chevron-left.svg" alt="Previous">
-                    </div>
-                        <div class="swiper swiper-re relative lg:pl-0 pl-4">
-                            <div class="swiper-wrapper">
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <hr class="line-between-swiper lg:mx-20 lg:my-8 mx-4 my-6 px-4">
-            <section class="lg:px-20">
-                <div class="flex flex-col gap-y-6">
-                    <div class="lg:px-0 flex items-center lg:gap-x-8 gap-x-3 px-4">
-                        <div class="shrink-0 lg:w-24 lg:h-24 w-16 h-16 bg-blue50 rounded-full flex items-center justify-center">
-                            <img src="/dist/img/our-project/geothermal&powerplan.svg" alt="Geothermal & Powerplan">
-                        </div>
-                        <header class="flex flex-col gap-y-2 lg:max-w-[630px]">
-                            <span class="lg:text-2xl text-lg text-neutral700 font-bold">Geothermal & Powerplan</span>
-                            <p class="lg:text-base text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis. Eu platea sit
-                                urna egestas consectetur.</p>
-                        </header>
-                    </div>
-                    <div x-data="{
-                        init() {
-                            new Swiper('.swiper-re', {
-                            slidesPerView: 'auto',
-                            spaceBetween: 20,
-                            breakpoints: {
-                              1024: {
-                                navigation: {
-                                  nextEl:'.chevron-button-next',
-                                  prevEl:'.chevron-button-prev',
-                                },
-                              }
-                            }
-                          });
-                        }
-                    }" class="relative">
-                    <div class="chevron-button-next -right-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                        <img class="my-[17px] mr-[21px] ml-[23px]" src="/dist/img/chevron/chevron-right.svg" alt="Next">
-                    </div>
-                    <div class="chevron-button-prev -left-[28px] lg:flex hidden select-none absolute top-1/2 -translate-y-1/2 z-20 w-[56px] h-[56px] bg-white rounded-full items-center justify-center box-border chevron-button-shadow">
-                        <img class="my-[17px] mr-[23px] ml-[21px]" src="/dist/img/chevron/chevron-left.svg" alt="Previous">
-                    </div>
-                        <div class="swiper swiper-re relative lg:pl-0 pl-4">
-                            <div class="swiper-wrapper">
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure class="swiper-slide lg:!w-[305px] !w-[200px]">
-                                    <img class="lg:!h-[250px] w-full !h-[168px] object-cover"
-                                        src="/dist/img/our-project/sample-img-from-death-stranding-2-trailer.png"
-                                        alt="Geothermal & Powerplan">
-                                    <figcaption class="pt-4 flex flex-col gap-y-2">
-                                        <span class="lg:text-lg text-base text-neutral700 font-bold">Geothermal & Powerplan</span>
-                                        <p class="text-sm text-neutral600 font-normal lg:hidden block">Lorem ipsum dolor sit amet
-                                            consectetur. Ultricies sed
-                                            vitae gravida aliquam. . .
-                                        </p>
-                                        <p class="lg:block hidden text-sm text-neutral600 font-normal">Lorem ipsum dolor sit amet consectetur.
-                                            Ultricies sed vitae gravida aliquam scelerisque hendrerit lacus venenatis.
-                                            Eu
-                                            platea sit urna egestas consectetur.</p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
-   
+        <hr :class="index === 3 ? 'hidden' : ''" class="border-neutral300 border-[1px] max-w-[1440px] lg:mx-auto lg:my-8  my-6 mx-4">
+    </section>
+</template>
+
+
+

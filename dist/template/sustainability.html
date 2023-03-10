@@ -2,33 +2,65 @@
     <img class="absolute top-0 left-0" src="/dist/img/ornament/pattern-2.svg" alt="Ornament">
     <div class="max-w-[658px] flex flex-col items-center gap-y-3 text-center">
         <span class="text-3xl font-bold text-primary">Sustainability</span>
-        <p class="text-base text-primary font-medium">We present our innovative project across the archipelago to your contentment</p>
-        <a class="bg-primary rounded text-lg font-bold py-3 px-8 text-white w-max"
-            href="javascript:void(0)">Contact Us</a>
+        <p class="text-base text-primary font-medium">We present our innovative project across the archipelago to your
+            contentment</p>
+        <a class="bg-primary rounded text-lg font-bold py-3 px-8 text-white w-max" href="javascript:void(0)">Contact
+            Us</a>
     </div>
-    <div class="sustainability-pagination absolute bottom-0 lg:px-20 max-w-[1440px] w-full translate-y-[46px]">
-        <ul class="sustainability-shadow-pagination px-8 w-full flex bg-white py-6 ">
-            <li class="w-full">
-                <a x-init="$el.getAttribute('href') === window.location.pathname ? $el.classList.add('sustainability-active-link') : ''" class="rounded-xl font-medium text-lg text-neutral600 py-2 w-full block  text-center" x-transition href="/sustainability/quality-policy">Quality Policy</a>
-            </li>
-            <li class="w-full">
-                <a x-init="$el.getAttribute('href') === window.location.pathname ? $el.classList.add('sustainability-active-link') : ''" class="font-medium text-lg text-neutral600 py-2 w-full block text-center " x-transition href="/sustainability/hse">HSE</a>
-            </li>
-            <li class="w-full">
-                <a x-init="$el.getAttribute('href') === window.location.pathname ? $el.classList.add('sustainability-active-link') : ''" class="font-medium text-lg text-neutral600 py-2 w-full block text-center" x-transition href="/sustainability/csr">CSR</a>
-            </li>
-            <li class="w-full">
-                <a x-init="$el.getAttribute('href') === window.location.pathname ? $el.classList.add('sustainability-active-link') : ''" class="font-medium text-lg text-neutral600 py-2 w-full block text-center " x-transition href="/sustainability/certification">Certification</a>
-            </li>
-            <li class="w-full">
-                <a x-init="$el.getAttribute('href') === window.location.pathname ? $el.classList.add('sustainability-active-link') : ''" class="font-medium text-lg text-neutral600 py-2 w-full block text-center " href="/sustainability/it-technology">IT Technology</a>
-            </li>
-            <li class="w-full">
-                <a x-init="$el.getAttribute('href') === window.location.pathname ? $el.classList.add('sustainability-active-link') : ''" class="font-medium text-lg text-neutral600 py-2 w-full block text-center " x-transition href="/sustainability/gcg">GCG</a>
-            </li>
-        </ul>
+
+    <div x-data="{
+        linkInit($el) {
+            $el.getAttribute('href') === window.location.pathname ? $el.classList.add('sustainability-active-link') : ''
+        },
+        init() {
+            window.addEventListener('popstate', () => {
+                $el.querySelectorAll('.sustainability-pagination ul li a').forEach(el => el.classList.remove('sustainability-active-link'))
+                let el = $el.querySelector(`a[href='${window.location.pathname}']`)
+                el ? el.classList.add('sustainability-active-link') : ''
+            })
+        },
+        changeActive(e) {
+            $el.querySelectorAll('.sustainability-pagination ul li a').forEach(el => el.classList.remove('sustainability-active-link'))
+            e.target.classList.add('sustainability-active-link')
+        }
+    }"
+        class="py-3 sustainability-pagination absolute bottom-0 lg:px-20 translate-y-[46px] lg:overflow-visible overflow-x-scroll lg:flex lg:justify-center w-full max-w-[1440px]">
+        <div class="lg:w-full w-[1024px] shrink-0">
+            <ul class="lg:rounded-xl sustainability-shadow-pagination px-8 w-full flex bg-white py-6 ">
+                <li class="w-full">
+                    <a @click="changeActive" x-init="linkInit($el)"
+                        class="rounded-xl font-medium text-lg text-neutral600 py-2 w-full block  text-center"
+                        x-transition href="/sustainability/quality-policy">Quality Policy</a>
+                </li>
+                <li class="w-full">
+                    <a @click="changeActive" x-init="linkInit($el)"
+                        class="font-medium text-lg text-neutral600 py-2 w-full block text-center " x-transition
+                        href="/sustainability/hse">HSE</a>
+                </li>
+                <li class="w-full">
+                    <a @click="changeActive" x-init="linkInit($el)"
+                        class="font-medium text-lg text-neutral600 py-2 w-full block text-center" x-transition
+                        href="/sustainability/csr">CSR</a>
+                </li>
+                <li class="w-full">
+                    <a @click="changeActive" x-init="linkInit($el)"
+                        class="font-medium text-lg text-neutral600 py-2 w-full block text-center " x-transition
+                        href="/sustainability/certification">Certification</a>
+                </li>
+                <li class="w-full">
+                    <a @click="changeActive" x-init="linkInit($el)"
+                        class="font-medium text-lg text-neutral600 py-2 w-full block text-center "
+                        href="/sustainability/it-technology">IT Technology</a>
+                </li>
+                <li class="w-full">
+                    <a @click="changeActive" x-init="linkInit($el)"
+                        class="font-medium text-lg text-neutral600 py-2 w-full block text-center " x-transition
+                        href="/sustainability/gcg">GCG</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
-<section class="sub-page lg:px-20 px-4 pt-[84px] max-w-[1440px] mx-auto">
+<section class="sub-page lg:px-20 px-4 pt-[84px] max-w-[1440px] w-full mx-auto">
 
 </section>
